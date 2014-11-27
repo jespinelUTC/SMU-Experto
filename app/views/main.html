@@ -34,7 +34,8 @@
 	    <!-- Fonts -->
 	    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 	    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-	
+
+		
     </head>
     <body>
     
@@ -52,7 +53,7 @@
                 </button>
                 
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">SMU-Experto</a>
+                <a class="navbar-brand" href="/">SMU-Experto</a>
             </div>
             
             
@@ -60,7 +61,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">inicio</a>
+                        <a href="/">inicio</a>
                     </li>
                     <li>
                         <a href="about.html">historial</a>
@@ -69,7 +70,7 @@
                         <a href="blog.html">evaluar</a>
                     </li>
                     <li>
-                        <a href="contact.html">login</a>
+                        <a href="/usuario">login</a>
                     </li>
                 </ul>
             </div>
@@ -82,13 +83,13 @@
     
     
     <br><br><br><br>
-     <div class="brand">
-     	
-     	 <img height="150px" width="150px"src="@{'/public/images/favicon.png'}" alt="">
+    
+     <div class="brand">   	
+     	<a href="/"> <img height="150px" width="150px"src="@{'/public/images/favicon.png'}" alt=""> </a>
      	 SMU-Experto
      	
      </div>
-     
+    
     <div class="address-bar">Sistema de evaluación de usabilidad mediante la aplicación del análisis Heurístico</div>
    
         #{doLayout /}
@@ -100,15 +101,14 @@
 	
     <footer>
     
-    
-    
-    
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <p>
-	                    Universidad Técnica de Cotopaxi<br>          
-	                    Copyright &copy; René Quisaguano, Edgar Acurio<br>
+            
+	                    <strong>Universidad Técnica de Cotopaxi</strong>
+	                    <br>          
+	                    Copyright &copy; René Quisaguano, Edgar Acurio, David Criollo<br>
 	                    2014
                     </p>
                 </div>

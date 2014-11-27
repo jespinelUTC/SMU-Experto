@@ -13,3 +13,7 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+#Rutas de usuarios
+
+GET 	/usuario								Usuarios.index
