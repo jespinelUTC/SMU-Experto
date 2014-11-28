@@ -17,3 +17,11 @@ GET     /public/                                staticDir:public
 #Rutas de usuarios
 
 GET 	/usuario								Usuarios.index
+
+#Ruta de historiales
+GET 	/historiales							Historiales.index
+#Ruta de evaluaciones
+GET		/evaluaciones							Evaluaciones.index
+
+#Importar rutas de seguridad
+*		/										module:secure
