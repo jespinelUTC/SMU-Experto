@@ -24,4 +24,4 @@ GET 	/historiales							Historiales.index
 GET		/evaluaciones							Evaluaciones.index
 
 #Importar rutas de seguridad
-*		/										module:secure
+GET		/login									Securing.login

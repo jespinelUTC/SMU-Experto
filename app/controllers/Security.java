@@ -14,7 +14,7 @@ public class Security extends Securing.Security {
 	public static void guardarUsuario(String email, String nombre,String apellido,String password){
 		Usuario u=new Usuario(email,nombre,apellido,password);
 		u.save();
-		redirect("/secure/login");
+		redirect("/login");
 	}
 
 }
