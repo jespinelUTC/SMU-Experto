@@ -39,6 +39,7 @@
 		
 	    <!-- Custom CSS -->
 	    <link href="@{'/public/stylesheets/business-casual.css'}" rel="stylesheet">
+	     <link href="@{'/public/stylesheets/misestilos.css'}" rel="stylesheet">
 	
 	    <!-- Fonts -->
 	    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -68,7 +69,10 @@
     
 	<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    
+    
         <div class="container">
+        
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -83,6 +87,9 @@
                 <span class="navbar-brand" id="usuarioCon">${user}</span>
                 
             </div>
+            
+            
+            
             
             
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -100,15 +107,13 @@
                     <li>
                     
                     <li class="dropdown">
-						    <a class="dropdown-toggle"
-						       data-toggle="dropdown"
-						       href="#">
+						    <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
 						        Sesión
 						        <b class="caret"></b>
 						      </a>
 						    <ul class="dropdown-menu">						    
 							    #{if user}
-							     <li> <a href="@{Securing.logout()}">Salir</a></li>
+							     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
 							    #{/if}
 							    #{else}
 							    <li> <a href="/login">Iniciar Sesión</a></li> 
@@ -117,10 +122,7 @@
 						  </li>
 	                        
                     </li>
-                    
-                    <li>
-                    	<a id="usuarioConectado">${user}</a>
-                    </li>
+                               	
                 </ul>
                 
               
@@ -130,10 +132,28 @@
         <!-- /.container -->
     </nav>
     
-  
     
     
-    <br><br><br><br><br><br><br><br>
+    
+    
+    <!-- Nombre de usuario conectado -->
+    		#{if user}		
+           		<span id="usuarioConectado" class="nav navbar-nav collapse navbar-collapse navbar-fixed-top"  style='text-align: right' >${user} - <a href="@{Securing.logout()}">Cerrar Sesión</a></span>	
+			#{/if}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <br><br> <br><br>
     
      <div class="brand">   	
      	<a href="/"> <img height="150px" width="150px"src="@{'/public/images/favicon.png'}" alt=""> </a>
