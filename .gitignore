@@ -3,14 +3,14 @@ Thumbs.db
 ehthumbs.db
 
 #Archivos omitidos
-/tmp
-/modules
-/lib
-/test-result
-/logs
-/conf
-/eclipse
-*.conf
+/tmp/
+/modules/
+/lib/
+/test-result/
+/logs/
+conf/
+/eclipse/
+
 
 # Folder config file
 Desktop.ini
