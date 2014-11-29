@@ -1,6 +1,6 @@
 
 #Archivos omitidos
-/home/rene/workspace/SMU-Experto/conf/*.conf
+/conf/*.conf
 /tmp
 /modules
 /lib
