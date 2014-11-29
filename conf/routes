@@ -6,22 +6,22 @@
 *     /                                       Application.index
 
 # Ignore favicon requests
-GET     /favicon.ico                            404
+*     /favicon.ico                            404
 
 # Map static resources from the /app/public folder to the /public path
-GET     /public/                                staticDir:public
+*     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 
 #Rutas de usuarios
 
-GET 	/usuario								Usuarios.index
+* 	/usuario								Usuarios.index
 
 #Ruta de historiales
-GET 	/historiales							Historiales.index
+*	/historiales							Historiales.index
 #Ruta de evaluaciones
-GET		/evaluaciones							Evaluaciones.index
+*	/evaluaciones							Evaluaciones.index
 
 #Importar rutas de seguridad
-GET		/login									Securing.login
+*	/login									Securing.login
