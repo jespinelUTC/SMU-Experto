@@ -1,8 +1,10 @@
-/.project
+#Archivos omitidos
 /tmp
 /modules
 /lib
 /test-result
 /logs
-/eclipse
 /conf
+/eclipse
+
+
