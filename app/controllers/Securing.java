@@ -11,7 +11,7 @@ import play.data.validation.*;
 import play.libs.*;
 import play.utils.*;
 
-public class Secure extends Controller {
+public class Securing extends Controller {
 
 	
     @Before(unless={"login", "authenticate", "logout"})
@@ -22,17 +22,17 @@ public class Secure extends Controller {
             login();
         }
         // Checks
-        Check check = getActionAnnotation(Check.class);
+        Checking check = getActionAnnotation(Checking.class);
         if(check != null) {
             check(check);
         }
-        check = getControllerInheritedAnnotation(Check.class);
+        check = getControllerInheritedAnnotation(Checking.class);
         if(check != null) {
             check(check);
         }
     }
 
-    private static void check(Check check) throws Throwable {
+    private static void check(Checking check) throws Throwable {
         for(String profile : check.value()) {
             boolean hasProfile = (Boolean)Security.invoke("check", profile);
             if(!hasProfile) {

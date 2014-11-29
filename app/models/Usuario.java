@@ -2,12 +2,13 @@ package models;
 
 import javax.persistence.Entity;
 
+import net.sf.oval.constraint.Email;
 import play.db.jpa.Model;
 
 @Entity
 public class Usuario extends Model{
 	
-	public String email;
+	@Email public String email;
 	public String nombre;
 	public String apellido;
 	public String password;

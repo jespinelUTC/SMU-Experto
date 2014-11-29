@@ -7,7 +7,7 @@ import java.util.*;
 
 import org.junit.Before;
 
-import controllers.Secure.Security;
+import controllers.Securing.Security;
 import models.*;
 
 

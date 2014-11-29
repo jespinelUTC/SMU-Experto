@@ -3,7 +3,7 @@ package controllers;
 import models.Usuario;
 import play.mvc.Controller;
 
-public class Security extends Secure.Security {
+public class Security extends Securing.Security {
 	
 	static boolean authenticate(String username, String password){
         Usuario user = Usuario.find("byEmail", username).first();
@@ -14,7 +14,7 @@ public class Security extends Secure.Security {
 	public static void guardarUsuario(String email, String nombre,String apellido,String password){
 		Usuario u=new Usuario(email,nombre,apellido,password);
 		u.save();
-		redirect("/");
+		redirect("/secure/login");
 	}
 
 }

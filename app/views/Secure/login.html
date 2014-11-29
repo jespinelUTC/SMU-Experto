@@ -113,7 +113,7 @@
 		                                <div class="form-group">
 		                                    <!-- Button -->                                        
 		                                    <div class="col-md-offset-3 col-md-9">
-		                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Registrar</button>
+		                                        <button id="btn-signup" type="submit" class="btn btn-info" onclick="confirmar();"><i class="icon-hand-right"></i> &nbsp Registrar</button>
 		                                    </div>
 		                                </div>
 		                           #{/form}
@@ -127,6 +127,36 @@
 		    </div>
     <br><br>
     
+    <!-- VENTANA MODAL DE CONFIRMACION DE REGISTRO -->
+       <div id="registro" class="modal fade">
+	   <div class="modal-dialog">   
+	      <div class="modal-content"> 
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+	            ×
+	            </button>
+	            <h3>Mensaje</h3>
+	         </div>
+	         <div class="modal-body">
+	            <h4>Cuenta Registrada Exitosamente</h4>
+	            <p>Ahora ya puede iniciar sesión!</p>                
+	         </div>
+	         <div class="modal-footer">
+	            <a href="#" class="btn btn-success" data-dismiss="modal" >Aceptar</a>
+	         </div>
+	   	</div>
+	   </div>
+	</div>
+	
+	<script>
+	function confirmar(){
+		$('#registro').modal({
+			  show: true 
+			})
+	}
+	</script>
+	  
+	  
 	  
 	</body>
 

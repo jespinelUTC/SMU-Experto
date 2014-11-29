@@ -1,6 +1,6 @@
 package controllers;
 
-import controllers.Secure.Security;
+import controllers.Securing.Security;
 import models.Usuario;
 import play.mvc.Controller;
 
