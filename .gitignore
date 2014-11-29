@@ -10,6 +10,7 @@ ehthumbs.db
 /logs
 /conf
 /eclipse
+*.conf
 
 # Folder config file
 Desktop.ini
