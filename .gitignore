@@ -1,6 +1,6 @@
 
 #Archivos omitidos
-
+/conf/application.conf
 /tmp
 /modules
 /lib
