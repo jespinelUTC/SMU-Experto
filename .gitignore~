@@ -1,6 +1,6 @@
 
 #Archivos omitidos
-/home/rene/application.conf
+/conf/*.conf
 /tmp
 /modules
 /lib
