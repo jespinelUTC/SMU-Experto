@@ -1,9 +1,10 @@
 
 #Archivos omitidos
+/home/rene/workspace/SMU-Experto/conf/*.conf
 /tmp
 /modules
 /lib
 /test-result
 /logs
 /eclipse
-/*.conf
+
