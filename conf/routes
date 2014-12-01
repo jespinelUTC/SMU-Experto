@@ -29,3 +29,6 @@
 
 #Importar rutas de seguridad
 *	/login									Securing.login
+
+#PARA Datos
+*  /datos									Datos.index

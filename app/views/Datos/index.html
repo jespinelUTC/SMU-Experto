@@ -1,0 +1,317 @@
+#{extends 'main.html' /}
+#{set title:'Datos del Análisis'/}
+
+
+
+
+ <!-- VENTANA MODAL DE CONFIRMACION DE REGISTRO -->
+				       <div id="datos" class="modal fade">
+					   <div class="modal-dialog">   
+					      <div class="modal-content"> 
+					         <div class="modal-header">
+					            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					            ×
+					            </button>
+					            <h3>Datos del Análisis</h3>
+					         </div>
+					         
+					        
+					         
+					         <div class="modal-body">
+						         <center>
+						            <table class="table table-striped  table-bordered" >
+						            
+						            	<tr>
+						            		<td>
+						            			<b>Fecha:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="date" name="fecha">
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	<tr>
+						            		<td>
+						            			<b>Agente de usuario:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<select>
+						            				<option>PC - Navegador Web</option>
+						            				<option>PC - Aplicación de Escritorio</option>
+						            				<option>Móvil - Navegador Web</option>
+						        	   				<option> Móvil - Aplicación</option>		
+						            			</select>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						            	<tr>
+						            		<td>
+						            			<b>Nombre del Sitio:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="text" placeholder="Youtube, Gmail, SRI, etc">
+						            		</td>
+						            	</tr>
+						            	
+						            	
+						            	<tr>
+						            		<td>
+						            			<b>Plataforma:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<select>
+						            				<option>Web</option>
+						            				<option>Escritorio</option>
+						            				<option>Móvil</option>		
+						            			</select>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						              <tr>
+						            		<td>
+						            			<b>Url:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="text" placeholder="www.abc123.com">
+						            		</td>
+						            	</tr>
+						            
+						            
+						            </table>
+						           </center>
+					            
+					            
+					            
+					                           
+					         </div>
+					         <div class="modal-footer">
+					            <a href="#" class="btn btn-success" data-dismiss="modal" >Guardar</a>
+					         </div>
+					   	</div>
+					   </div>
+					</div>
+					
+					<script>
+					/*$(document).ready(function(){
+						$('#datos').modal({
+							  show: true 
+							})
+						
+						
+						});
+					*/
+					
+					function mostrar(){
+						
+						$('#datos').modal({
+							  show: true 
+							})
+					}
+					
+					
+					
+				
+					</script>
+					
+					
+					
+
+
+
+
+
+<div class="container">
+
+  <div class="row">
+  
+            <div class="box">
+            
+            	<div class="col-lg-1">
+				
+					&nbsp;
+				
+				</div>
+				
+				 <style>
+		         	.colorFondo{
+		         	background-color:#00adef;
+		         	 filter: alpha(opacity=50);
+		         	}
+		         </style>
+            
+				<div class="col-lg-5">
+					
+				<h3 class="text-center">Datos del Análisis</h3>	
+				 <table class="table table-striped  table-bordered table-hover">
+						            
+						            	<tr>
+						            		<td class="colorFondo">
+						            			<b>Fecha:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">dd/mm/aaaa</input>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	<tr>
+						            		<td class="colorFondo">
+						            			<b>Agente de usuario:</b>
+						            		</td>
+						            		
+						            		<td >
+						            			<input type="hidden">navegador web</input>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						            	<tr>
+						            		<td class="colorFondo">
+						            			<b>Nombre del Sitio:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">youtube</input>
+						            		</td>
+						            	</tr>
+						            	
+						            	
+						            	<tr>
+						            		<td class="colorFondo">
+						            			<b >Plataforma:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">web</input>
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						              <tr>
+						            		<td class="colorFondo">
+						            			<b>Url:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">www.abc.com</input>
+						            		</td>
+						            	</tr>
+						            
+						            
+						            </table>
+						            
+						            <input type="button" value="Editar" class="btn btn-warning pull-right" onclick="mostrar()">
+	
+				   					<br>
+				   
+				
+				
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="col-lg-5">
+					
+				<h3 class="text-center">Objetivos del Análisis</h3>	
+				 <table class="table table-striped  table-bordered table-hover">
+						            
+						            	<tr>
+						            		<td>
+						            			<b>Fecha:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">dd/mm/aaaa</input>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	<tr>
+						            		<td>
+						            			<b>Agente de usuario:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">navegador web</input>
+						            		
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						            	<tr>
+						            		<td>
+						            			<b>Nombre del Sitio:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">youtube</input>
+						            		</td>
+						            	</tr>
+						            	
+						            	
+						            	<tr>
+						            		<td>
+						            			<b>Plataforma:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">web</input>
+						            		</td>						      						            		
+						            	</tr>
+						            	
+						              <tr>
+						            		<td>
+						            			<b>Url:</b>
+						            		</td>
+						            		
+						            		<td>
+						            			<input type="hidden">www.abc.com</input>
+						            		</td>
+						            	</tr>
+						            
+						            
+						            </table>
+						            
+						            <input type="button" value="Editar" class="btn btn-warning pull-right" onclick="mostrar()">
+	
+				   					<br>
+				   
+				
+				
+				</div>
+				
+				
+				<div class="col-lg-2">
+				
+					&nbsp;
+				
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+	</div>
+</div>
+	
+
+	
+	
