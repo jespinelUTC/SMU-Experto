@@ -8,5 +8,7 @@ import java.util.*;
 
 @Entity
 public class Dato extends Model {
+	public Date fecha;
+	
     
 }
