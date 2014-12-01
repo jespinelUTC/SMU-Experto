@@ -6,6 +6,6 @@
 /lib
 /test-result
 /logs
-/eclipse
+/eclipse/*.launch
 
 
