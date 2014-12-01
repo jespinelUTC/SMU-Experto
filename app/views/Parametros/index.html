@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12">
+					<table>
+						#{list items:par, as:'parametro'}		
+							<tr>
+								<td>${parametro.nombre} =====>"</td>
+								<td>${parametro.informacion}"</td>																		
+							<tr>
+						#{/list}
+					</table>
+					<h1>Parametros</h1>
+					<ul>
+						<li>Nuevo</li>
+
+						<form action="@{Parametros.nuevoParametro}">
+							<input type="text" name="nombre"><br>
+							 <input type="text" name="informacion"> <br>
+							 <input type="submit" value="Enviar">
+						</form>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

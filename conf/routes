@@ -22,6 +22,8 @@
 *	/historiales							Historiales.index
 #Ruta de evaluaciones
 *	/evaluaciones							Evaluaciones.index
+#Ruta de Parametros
+*	/parametros							    Parametros.index
 
 #Importar rutas de seguridad
 *	/login									Securing.login
