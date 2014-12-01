@@ -1,5 +1,4 @@
 #{extends 'main.html' /}
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -8,28 +7,35 @@
 <body>
 	<div class="container">
 		<div class="row">
+		<div class="box">
+		<h1>Parametros</h1>
+		</div>
 			<div class="box">
-				<div class="col-lg-12">
-					<table>
+				<div class="col-lg-6">
+					<table  class="table">
 						#{list items:par, as:'parametro'}		
 							<tr>
-								<td>${parametro.nombre} =====>"</td>
-								<td>${parametro.informacion}"</td>																		
+								<td><a href="/items?idParametro=${parametro.id}">${parametro.nombre}</a></td>
+								<td>${parametro.informacion}</td>																								
 							<tr>
 						#{/list}
 					</table>
-					<h1>Parametros</h1>
-					<ul>
-						<li>Nuevo</li>
+					</div>
+					<div class="col-lg-6">
+						
+						<ul>
+							<li><h3>Crear Nuevo</h3></li>
+	
+							<form action="@{Parametros.nuevoParametro}" method="POST">
+								Nombre:<br> <input type="text" name="nombre"><br><br>
+								Detalles:<br>  
+								<textarea rows="3" cols="30" name="informacion"></textarea><br>
+								<input type="submit" value="Enviar" class="btn btn-success">
+							</form>
+						</ul>
+						</div>
 
-						<form action="@{Parametros.nuevoParametro}">
-							<input type="text" name="nombre"><br>
-							 <input type="text" name="informacion"> <br>
-							 <input type="submit" value="Enviar">
-						</form>
-					</ul>
-
-				</div>
+				
 			</div>
 		</div>
 	</div>

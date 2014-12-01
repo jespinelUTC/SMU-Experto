@@ -24,6 +24,8 @@
 *	/evaluaciones							Evaluaciones.index
 #Ruta de Parametros
 *	/parametros							    Parametros.index
+#Ruta de items
+*	/items							    	Items.index
 
 #Importar rutas de seguridad
 *	/login									Securing.login
