@@ -12,12 +12,11 @@ import play.mvc.*;
 public class Items extends Controller {
 	
     public static void index(Long idParametro ) {
-    	Query query = JPA.em().createQuery("select * from item where parametro_id="+idParametro);
-        Parametro par= Parametro.findById(idParametro);
+    	Parametro par= Parametro.findById(idParametro);
     	//User.find(“byUsername”, usr).first();
-    	List <Item> it = query.getResultList();
-    	System.out.print("La consulta"+it);
-        render(par);
+    	
+    	List <Item> it= Item.find(" parametro_id= ?", idParametro).fetch();   
+        render(par,it);
     }
     public static void crearItem(Long idItem) {
 		render(idItem);

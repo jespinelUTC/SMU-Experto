@@ -11,10 +11,14 @@ public class Parametros extends Controller {
     	List<Parametro> par =Parametro.findAll();
         render(par);
     }
-    
+    /*
+     * Metodo para la creacion de un Nuevo Parametro
+     */
     public static void nuevoParametro(String nombre, String informacion) {
 		Parametro par = new Parametro(nombre, informacion);
 		par.save();
+		
+		
 		index();
 	}
 }

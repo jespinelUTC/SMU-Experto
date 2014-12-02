@@ -7,6 +7,9 @@ import javax.persistence.*;
 
 import java.util.*;
 
+/*
+ * Esta clase define el modelo de los parametros
+ */
 @Entity
 public class Parametro extends Model {
     public String nombre;
