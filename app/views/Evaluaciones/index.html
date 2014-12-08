@@ -23,14 +23,53 @@
 					
 					</div>
 					
-					<div class="col-lg-12">
-					
-						<a href="/datos" class="btn btn-primary"> Inicir Test</a>
+					<div class="col-lg-6">
+						<a href="/evaluaciones/create" class="btn btn-primary"> Nueva Evaluación</a>
+						
+						<br>
 					
 					</div>
 					
+
+					
 				</div>
 		</div>
+		
+		<div class="row">
+	  
+	            <div class="box">
+	            	
+	            	#{if evaluaciones}
+					<table class="table table-striped table-hover table-bordered">
+						<tr>
+							<th>Nombre</th>
+							<th colspan="2" ><center>ACCIONES</center></th>
+						</tr>
+						
+						#{list items:evaluaciones, as:'evaluacion'}
+						<tr>
+							
+						 	<td><legend>${evaluacion.dato.nombreSitio}</legend></td>
+						 	<td><a href="/datos" class="btn btn-success"> Inicir Test</a></td>
+						 </tr>
+						 #{/list}
+						
+					</table>	
+				#{/if}
+				#{else}
+					<H3>NO SE ENCONTRO DATOS</H3>
+					
+					
+					 
+				#{/else}
+	            	
+	            
+	            </div>
+	            
+	    </div>
+		
+		
+		
 	</div>
 	
 	

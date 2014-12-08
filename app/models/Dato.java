@@ -4,26 +4,35 @@ import play.*;
 import play.db.jpa.*;
 
 import javax.persistence.*;
+
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Entity
 public class Dato extends Model {
-	public Date fecha;
+	public String fecha;
 	public String plataforma;
-	public String agenteUsuario;
 	public String url;
 	public String nombreSitio;
 	
 	//Constructor
-	public Dato(Date f, String p,String a,String url,String n){
+	public Dato(String f, String p,String url,String n){
 		this.fecha=f;
 		this.plataforma=p;
-		this.agenteUsuario=a;
 		this.url=url;
 		this.nombreSitio=n;
 		
 	}
 	
+	public Dato(){
+		this.fecha="dd/mm/aaaa";
+		this.plataforma="web, móvil, desktop";
+		this.url="htttp://www.ejemplo.com";
+		this.nombreSitio="SITIO EJEMPLO";
+		
+	}
+	
+
 	
     
 }
