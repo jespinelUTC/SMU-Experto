@@ -23,13 +23,30 @@
 					
 					</div>
 					
-					<div class="col-lg-6">
-						<a href="/evaluaciones/create" class="btn btn-primary"> Nueva Evaluación</a>
+					<div class="col-lg-2">
+					
+						<a href="/evaluaciones/create" class="btn btn-warning"> 
+							<img src="@{'/public/images/nuevo.png'}">&nbsp; &nbsp;
+							<b style="color:black">Nueva Evaluación</b>
+						</a>
+						
 						
 						<br>
 					
 					</div>
 					
+					<div class="col-lg-6">
+					
+					</div>
+					
+					<div class="col-lg-4">
+						 <div class="input-group">
+						      <input type="text" class="form-control" placeholder="Ingrese datos">
+						      <span class="input-group-btn">
+						        <button class="btn btn-default" type="button"><strong>Buscar!</strong></button>
+						      </span>
+						 </div><!-- /input-group -->
+					</div>
 
 					
 				</div>
@@ -40,21 +57,47 @@
 	            <div class="box">
 	            	
 	            	#{if evaluaciones}
+	            	<div class="table-responsive">
 					<table class="table table-striped table-hover table-bordered">
 						<tr>
 							<th>Nombre</th>
-							<th colspan="2" ><center>ACCIONES</center></th>
+							<th colspan="3" ><center>ACCIONES</center></th>
 						</tr>
 						
 						#{list items:evaluaciones, as:'evaluacion'}
 						<tr>
 							
 						 	<td><legend>${evaluacion.dato.nombreSitio}</legend></td>
-						 	<td><a href="/datos" class="btn btn-success"> Inicir Test</a></td>
+						 	
+						 	<td>
+							 	<a href="/datos" class="btn btn-success">
+								 	<img src="@{'/public/images/iniciar.png'}">	&nbsp;	 	
+								 	Iniciar Test
+							 	</a>
+						 	</td>
+						 	
+						 	<td>
+						 		<a href="#" class="btn btn-primary" >
+						 		<img src="@{'/public/images/resultado.png'}">&nbsp; &nbsp;
+						 		 Ver Resultados
+						 		 </a>
+						 	</td>
+						 	
+						 	<td>
+						 	
+						 		<a href="#" class="btn btn-danger">
+						 		<img src="@{'/public/images/eliminar.png'}">&nbsp; &nbsp;
+						 	
+						 		 Eliminar Test
+						 		 </a>
+						 	</td>
+						 	
+						 	
 						 </tr>
 						 #{/list}
 						
 					</table>	
+					</div>
 				#{/if}
 				#{else}
 					<H3>NO SE ENCONTRO DATOS</H3>

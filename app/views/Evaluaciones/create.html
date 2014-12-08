@@ -21,13 +21,22 @@
 						 
 						 
 						 
-						 	<legend  class="text-center" >Nombre del Sitio a Evaluar: 
+						 	<legend  class="text-center" >Nombre del Sitio: 
 						 	
-						 	<input type="text" name="nombreSitio">
+						 	<input type="text" name="nombreSitio" placeholder="Ingrese el nombre" required>
 						 	</legend>
 						 	<center>
-							 	<input type="submit" value="Guardar" class=' btn btn-success'>
-							 	 <a class='btn btn-warning' href="/evaluaciones" > Cancelar </a>
+							 	<button type="submit" class=' btn btn-success'>
+							 	<img src="@{'/public/images/ok.png'}">&nbsp; 
+							 	<b style="color:black">Guardar</b>
+							 	
+							 	</button>
+							 	&nbsp; &nbsp;
+							 	
+							 	 <a class='btn btn-warning' href="/evaluaciones" >
+							 	 	<img src="@{'/public/images/cancelar.png'}">&nbsp; 
+							 	 <b style="color:black"> Cancelar</b>
+							 	   </a>
 						 	 </center>
 						 	
 						 
