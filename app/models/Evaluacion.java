@@ -8,9 +8,9 @@ import java.util.*;
 
 @Entity
 public class Evaluacion extends Model {
-	String fecha;
-	Dato dato;
-	Contexto contexto;
+	public String fecha;
+	public Dato dato;
+	public Contexto contexto;
 	
 	public Evaluacion(String f, Dato d, Contexto c){
 		this.fecha=f;

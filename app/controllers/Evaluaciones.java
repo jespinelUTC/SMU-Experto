@@ -1,5 +1,6 @@
 package controllers;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import models.Contexto;
@@ -10,6 +11,7 @@ import models.Usuario;
 import org.junit.Before;
 
 import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
+
 import java.util.*;
 
 import controllers.Securing.Security;
@@ -20,15 +22,15 @@ import play.mvc.With;
 public class Evaluaciones extends Controller{
 	
 	 
+
+	
 	public static void index(){
-		
-		
-		
 		//obteniendo datos del usuario que ha iniciado sesion
 		if(Security.isConnected()) {
-            Usuario user = Usuario.find("byEmail", Security.connected()).first();
-            renderArgs.put("user", user.nombre+" "+user.apellido);
-        }
+	        Usuario user = Usuario.find("byEmail", Security.connected()).first();
+	        renderArgs.put("user", user.nombre+" "+user.apellido);
+	    }
+		
 		
 		List <Evaluacion> evaluaciones= Evaluacion.find("order by id desc").fetch();
 		render(evaluaciones);
@@ -48,6 +50,7 @@ public class Evaluaciones extends Controller{
 		
 	}
 	
+	
 	public static void postCreate(String nombreSitio){
 		
 		Date fecha=new Date(); 
@@ -57,11 +60,28 @@ public class Evaluaciones extends Controller{
 		Contexto contexto=new Contexto();
 		contexto.save();
 		
-		Evaluacion evaluacion=new Evaluacion(fecha.toString(), datos, contexto);
+		String cadenaFecha = new SimpleDateFormat("yyyy-MM-dd").format(fecha);
+	
+		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto);
 		evaluacion.save();
 		
 		redirect("/evaluaciones");
 
+		
+	}
+	
+	public static void delete(Long id){
+		
+		Evaluacion evaluacion=Evaluacion.findById(id);
+		Dato dato=Dato.findById(evaluacion.dato.id);
+		Contexto contexto=Contexto.findById(evaluacion.contexto.id);
+		//Agrgar eliminacion de los resultados
+		evaluacion.delete();
+		dato.delete();
+		contexto.delete();
+    	
+    	redirect("/evaluaciones");
+		
 		
 	}
 	

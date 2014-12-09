@@ -27,7 +27,7 @@ public class Datos extends Controller {
     }
     
     public static void guardarDatos(String fecha, String plataforma,String url,String nombreSitio){
-		d1=new Dato(fecha,plataforma,url,nombreSitio);
+		d1=new Dato(plataforma,url,nombreSitio);
 		d1.save();
 		index();
 		
