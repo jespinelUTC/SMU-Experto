@@ -12,33 +12,34 @@
 				<h1>${par.nombre}</h1>
 			</div>
 			<div class="box">
-				<div class="col-lg-6">
-					#{if it}					
-					<ul>
-						#{list items:it, as:'items'}
-						<li><a href="@{Application.show(item.id)}">${items.pregunta}</a></li> 
+				<div class="col-lg-6">										
+					<table class="table">
+					#{if itms}
+						#{list items:itms, as:'lista'}
+						<tr>
+						<td>${lista.pregunta}</td><td><a href="@{Items.eliminarItem}?idItem=${lista.id}"><input type="button" value = Eliminar class="btn btn-danger "></a><td>
+						<tr>
 						#{/list}
-					</ul>
 					#{/if}
-					#{else} 
-					Sorry! There are not Items for this Parameter
+					#{else}
+						Sorry there are not items
 					#{/else}
+					<tr><td><a href="/parametros#titulo"><input type="button" value="Volver" class="btn btn-warning"></a></td></tr>
+					</table>					
 					</div>
 					<div class="col-lg-6">
-					<ul>
-					
+					<ul>					
 					<li>Añadir Nuevo Item o Pregunta</li>
 					</ul>
-					<form action="Items.crearItem()" method="post">
-						Pregunta:<br><textarea rows="3" cols="30" name="pregunta"></textarea>
+					<form action="@{Items.crearItem}" method="post">
+					<input type="hidden" name="idParam" value="${par.id}">
+						Pregunta:<br><textarea rows="3" cols="30" name="pregunta" required></textarea>
 						<br>
-						<input type="submit" value="enviar">
+						<input type="submit" value="enviar" class="btn btn-success">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<h1>Items</h1>
-
 </body>
 </html>
