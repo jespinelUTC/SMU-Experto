@@ -1,0 +1,435 @@
+[33mcommit 0f99968e5e83248868c7864e1d57e9aab7fb6038[m
+Author: edgar-ach <chirix27@gmail.com>
+Date:   Wed Dec 17 17:07:03 2014 -0500
+
+    Eliminacion implementata en Parametros e Items
+
+[33mcommit 1cc1935708a5602dbaf21ae06701798553da0d4a[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Tue Dec 9 14:50:28 2014 -0500
+
+    Boton eliminar analisis
+
+[33mcommit d20c9181c5ee45e81f1ffc0c7d2f968f638bcef9[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 8 17:33:59 2014 -0500
+
+    Mejorando disenio de evaluaciones
+
+[33mcommit 87e34dfe9de54ed3142f8b20fc7e06421e407b49[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 8 15:55:02 2014 -0500
+
+    Creacion de evaluaciones
+
+[33mcommit 859afe7fd482596e1d75e560ff6440b4a610bfea[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Tue Dec 2 17:11:52 2014 -0500
+
+    Implemetado formulario de creacion de items
+
+[33mcommit bd9dd5b091b23f010fc245a40390b494d08f7414[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 17:15:05 2014 -0500
+
+    Disenando modulo de datos del analisis
+
+[33mcommit dbe2c2af4d55a2fd08149113052479a4220d1932[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 17:08:34 2014 -0500
+
+    Enlaces a Creacion de items
+
+[33mcommit 9b44fe13ef8b549c979a72e7eb3c7abba32c249d[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 14:29:40 2014 -0500
+
+    Arreglando carrusel
+
+[33mcommit a9bfaf57d372290ce53631d8ab28e9b8ce52ecbb[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 13:10:01 2014 -0500
+
+    Borrando classpath
+
+[33mcommit 11298269876b805e8b7fdcbf6eb147944ad240b4[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 13:07:13 2014 -0500
+
+    Sin classpath
+
+[33mcommit ce87bf51be26b23aa1baf66ac37f2bb57de65a91[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 12:59:41 2014 -0500
+
+    Rene sin eclipse
+
+[33mcommit bac7720c9ed7a1456700a95926b44b8e9e0b02ec[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 12:56:54 2014 -0500
+
+    Sin eclipse
+
+[33mcommit dfa12a59f983f05ddb315bd86533be47b2fe7776[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 12:52:04 2014 -0500
+
+    Probando
+
+[33mcommit 34a498f6df35fbc5e60e49f9c8fe321be5b58c0c[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 12:09:35 2014 -0500
+
+    Modelo Dato
+
+[33mcommit 91716392640bde8db78c73a6c7a6c78128ff0708[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 12:39:44 2014 -0500
+
+    ignirando eclipse
+
+[33mcommit 354c83a4dd7e873c05f42a3154bb3ccaa382f16e[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 12:13:52 2014 -0500
+
+    Eclipsify
+    
+    Adamtando proyecto a eclipse
+
+[33mcommit 336468b1ffb18c6d739850a8b6611d87933df7e4[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 12:05:37 2014 -0500
+
+    Sin Eclipse
+
+[33mcommit 82fbba32b9cfe03f40461688d03a9e062c118255[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 11:59:22 2014 -0500
+
+    COnfigurando plugin jar
+
+[33mcommit 99c6bf4f76616c6fc77dbe2c4951d77c9fdd87b9[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Mon Dec 1 11:47:11 2014 -0500
+
+    Imagen de ladrillos
+
+[33mcommit 278cd116e7c9c62b38070698ea6b9b70f081cc89[m
+Author: edgar-ach <edgar.acurio@gmail.com>
+Date:   Mon Dec 1 11:44:08 2014 -0500
+
+    Create Parametro
+    
+    Se puede Crear parametros
+
+[33mcommit 5253154a9fa2ceb5a429fa21204487207a29bc82[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 18:01:30 2014 -0500
+
+    Volviendo a desarrollo local
+
+[33mcommit b5ba367994855ee2eae61d57a43ebfac53e8a0e5[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 17:58:28 2014 -0500
+
+    Volviendo a desarrollo local
+
+[33mcommit 43c682b0208c3ca1b5b590785f54ead7af09c9df[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 17:57:22 2014 -0500
+
+    Volviendo a desarrollo local
+
+[33mcommit 57ed13e129f17de8770d33448b50937cd78a208d[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 17:52:23 2014 -0500
+
+    Preparando para heroku
+
+[33mcommit 9a5f365b1c18e3f6cc0632f9753f6617f3166a2c[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 17:50:37 2014 -0500
+
+    Mejorando template login
+
+[33mcommit f566d82680aa492816aa463358c57aaa915abb7d[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 16:27:48 2014 -0500
+
+    probando application.conf
+
+[33mcommit 394a0e87d8f14aa64617d1531198507ece2e975b[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 16:04:33 2014 -0500
+
+    recuperado
+
+[33mcommit 8140a8002078c8e4ed5a836481f58f484c60a2f3[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Sat Nov 29 16:03:25 2014 -0500
+
+    Update .gitignore
+
+[33mcommit 589a8b7cd15602e972377a150749c9a11dca368c[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Sat Nov 29 16:01:36 2014 -0500
+
+    Create application.conf
+
+[33mcommit 1e55404d88181b52c79cdaefd181645cd6e07663[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Sat Nov 29 16:01:03 2014 -0500
+
+    Update .gitignore
+
+[33mcommit 15d4d17813cbd41a05a31f3e44c856b33f3a1fec[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Sat Nov 29 16:00:36 2014 -0500
+
+    borrando
+
+[33mcommit 25d3c2bd1b31c83bb83e243979716df56fea3d14[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Sat Nov 29 15:59:21 2014 -0500
+
+    Create application.conf
+
+[33mcommit afa56ac3a311a5cf00a4bab5ccaacf7e869f4e60[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:54:19 2014 -0500
+
+    Recuperando
+
+[33mcommit fb4ef76ed52fd7018844919cd8762d8b33fb8a83[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:50:53 2014 -0500
+
+    Recuperando
+
+[33mcommit 9913946bd1e723216b71e0ff10a7eab1eba8378f[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:40:18 2014 -0500
+
+    Recuperando
+
+[33mcommit 19b045f413d82118fb46c7b0fed37e7893646622[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:38:23 2014 -0500
+
+    Recuperando
+
+[33mcommit 986ad511d9eb5f5a25847d42562925aa7cd5657e[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:37:32 2014 -0500
+
+    Recuperando
+
+[33mcommit 90cbaa37c790ece3ec5ce226167877442f8c9207[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:34:22 2014 -0500
+
+    omirtiendo
+
+[33mcommit 9dd9304c4d795866ba3ab62a9d090fdfdd33e937[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:22:35 2014 -0500
+
+    BDD local
+
+[33mcommit 9a54016678c680ef34e04d8936fcc35dab4f15f4[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 15:17:16 2014 -0500
+
+    Omitiendo
+
+[33mcommit c9cb03a6852f7f12d5fb91e8f7979295ce8f18e0[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:59:56 2014 -0500
+
+    Omitiendo
+
+[33mcommit be94a8d0bea5902391c869397a4aae2bdcbf0431[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:55:57 2014 -0500
+
+    Omitido
+
+[33mcommit e32d421efeb47c598bac1e5a37c02b2129d6dca5[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:54:08 2014 -0500
+
+    Omitido
+
+[33mcommit dc04310528424fcd6d02a9c226ce8c7c047da00b[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:52:40 2014 -0500
+
+    Reparando gitignore
+
+[33mcommit a0d5cf3ef64e005f5816f0e78b17795e736a5816[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:49:16 2014 -0500
+
+    omitiendo
+
+[33mcommit 8395bb37567c8d5cd22500ea0afea5d06c0cea4a[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:46:11 2014 -0500
+
+    omitiendo conf
+
+[33mcommit 9d6332e0a3febd8449fd9b9c13f11baaf005fa5f[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:31:56 2014 -0500
+
+    Omitiendo archivos .conf
+
+[33mcommit 0281df9ce93fae8d4e3b13400f1f563188988690[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:29:55 2014 -0500
+
+    ignorando application.conf
+
+[33mcommit 927a7559c60be6641b2a57c88ba4e4a1ca4f1b96[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:26:14 2014 -0500
+
+    Omitiendo archivo application.conf
+
+[33mcommit b69f1f787d84fe0c9496cedb6387b2f0e37c7b72[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 14:01:49 2014 -0500
+
+    Configurando bdd
+
+[33mcommit b12bd9e16bf0dd2077d85e78a2a7b271d5e31092[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 13:47:14 2014 -0500
+
+    Borrando Procfile
+
+[33mcommit 11043449942478e0d9949994f104adc83ae9eef3[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 13:44:57 2014 -0500
+
+    Datos bdd en la nube
+
+[33mcommit b7dddb88f4f9e7dce578894ddaa674740dbcf304[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 12:12:26 2014 -0500
+
+    Quitando bdd local
+
+[33mcommit 09eeb859325dbbfb81190f1af56bdbac28585189[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 12:03:52 2014 -0500
+
+    Incluyendo lineas de modo produccion
+
+[33mcommit 1e0a6eee1e7f6d551ad54731c0a8a53025222689[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:57:39 2014 -0500
+
+    Creadno Procfile
+
+[33mcommit 727e02f190cd390fdd4684f95f916ec64b1cb285[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:51:09 2014 -0500
+
+    configurando dependencias
+
+[33mcommit 469ec63b85e2e49c5edac47e7c81c6959ff70b4c[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:46:29 2014 -0500
+
+    Configurando dependencias
+
+[33mcommit bbbaefcb2e814606195f2fdf04f63d1ff16cb156[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:40:14 2014 -0500
+
+    Configurando dependencias
+
+[33mcommit 2a4ce9106a23e18c6b8a16d1fd2337d699eaa9e9[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:27:50 2014 -0500
+
+    Configurando ruta root
+
+[33mcommit d6c8c7be92fb9449d96aba753f10341686052fc4[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:19:01 2014 -0500
+
+    Configurando ruta root
+
+[33mcommit eeca549e8418506becc216864f3f71684d04dd12[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 11:08:54 2014 -0500
+
+    Cambiando nombre de modulo secure
+
+[33mcommit 06b607cc343bb364f8927f30c873080be69b2014[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Sat Nov 29 08:45:47 2014 -0500
+
+    Configurando app para subirla a heroku
+
+[33mcommit 27b1dc4ad799539f9c5441901e466f7814dc89b2[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 21:59:06 2014 -0500
+
+    Login implementado por MEJORAR la estructura
+
+[33mcommit 168d0075f18cc2d0af8848b045995edcd70c5932[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 16:56:50 2014 -0500
+
+    Disenio de login y resgistro listo
+
+[33mcommit 815ae61761d995abef7b59923d7ed95681c5d2d8[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 14:53:31 2014 -0500
+
+    ARREGLANDO MENU
+
+[33mcommit 48367ac4f01c7ef8f80d2685629969817ae38206[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 14:16:43 2014 -0500
+
+    Agregando icono y logo al sistema
+
+[33mcommit 864615b0dab664edb5bdcf8c5360ee3edb068a6d[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 13:03:28 2014 -0500
+
+    Agregando Carrusel Responsivo
+
+[33mcommit 40a71a936c10e5e84034629657cb2c03b0369b46[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 08:02:35 2014 -0500
+
+    Borrando la prueba remota
+
+[33mcommit b85711ebc1f60a330210ee62e9da4a5496fd5fa4[m
+Author: Rene Quisaguano <renequisaguano@users.noreply.github.com>
+Date:   Thu Nov 27 07:55:22 2014 -0500
+
+    Create prueba
+
+[33mcommit c44dbd44cd3539a683de17bc289227461840fc7c[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Thu Nov 27 07:49:52 2014 -0500
+
+    Agregando template
+
+[33mcommit 90924b90dc67f8fea1b0f851ba9fc63e2258a184[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Wed Nov 26 21:09:11 2014 -0500
+
+    HOLA MUNDO CON GIT INICIADO
+
+[33mcommit b1c957e08d19152d26bd462f2bec4407487f39a1[m
+Author: renequisaguano <renequisaguano@gmail.com>
+Date:   Wed Nov 26 20:45:31 2014 -0500
+
+    INICIAL
