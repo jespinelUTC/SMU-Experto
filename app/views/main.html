@@ -85,8 +85,26 @@
                 </button>
                 
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                
+               
                 <a class="navbar-brand" href="/">SMU-Experto</a>
-                <span class="navbar-brand" id="usuarioCon">${user}</span>
+                 #{if user}
+                <span class="navbar-brand" id="usuarioCon">
+		                <span class="dropdown">
+			           			 <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
+									      <img src="@{'/public/images/usuario.png'}" alt="">
+									       ${user}
+						        <b class="caret"></b>
+						      </a>
+			        		  
+			        		    <ul class="dropdown-menu">						    
+									 <li> <a href="#">Cuenta</a></li> 
+								     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
+							    </ul> 
+			           		</span>
+                
+                </span>
+                #{/if}
                 
             </div>
             
@@ -140,7 +158,24 @@
     
     <!-- Nombre de usuario conectado -->
     		#{if user}		
-           		<span id="usuarioConectado" class="nav navbar-nav collapse navbar-collapse navbar-fixed-top"  style='text-align: right' >${user} - <a href="@{Securing.logout()}">Cerrar Sesión</a></span>	
+    		
+           		<span id="usuarioConectado" class="navbar-collapse collapse navbar-fixed-top"  style='text-align: right; margin-top:10px;' >
+	           		
+	           		<span class="dropdown">
+	           			 <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
+							      <img src="@{'/public/images/usuario.png'}" alt="">
+							       ${user}
+				        <b class="caret"></b>
+				      </a>
+	        		  
+	        		    <ul class="dropdown-menu">						    
+							 <li> <a href="#">Cuenta</a></li> 
+						     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
+					    </ul> 
+	           		</span>
+           		</span>
+
+    	
 			#{/if}
 
 
