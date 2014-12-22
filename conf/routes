@@ -33,3 +33,5 @@
 #PARA Datos
 *  /datos									Datos.index
 
+#Para error de email
+*  /error1									Security.error1

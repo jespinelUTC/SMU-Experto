@@ -6,6 +6,70 @@
 
 	<head>
 	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('#btn-signup').attr("disabled", "disabled");
+			var errorAction = #{jsAction @Security.error1(':mail')/}
+			
+			$('#email').keyup(function(){
+				var e=$('#email').val();
+					if (e != ""){
+					$('#errorEmail').load(
+							errorAction({mail: e})
+							
+					);
+					}
+				
+				
+				
+			});
+			
+			
+			$('#email').blur(function(){
+				var e=$('#email').val();
+					if (e != ""){
+					$('#errorEmail').load(
+							errorAction({mail: e})		
+					);
+					}else{
+						$('#errorEmail').html("");
+					}
+					
+	
+				
+				
+			});
+			
+			
+			
+		});
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	</script>
+	
 	</head>
 	<body>
 	
@@ -27,7 +91,7 @@
 		                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 		                            
 		                            
-		                      #{form @Securing.authenticate()}
+		                      #{form @Securing.authenticate(username,password)}
 		                                    
 		                            <div style="margin-bottom: 25px" class="input-group">
 		                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -86,28 +150,39 @@
 		                        </div>  
 		                        <div class="panel-body" >
 		                        
-		                        #{form @Security.guardarUsuario(email,nombre,apellido,password), id:'signupfor',class:'form-horizontal'}		                                  
+		                        #{form @Security.guardarUsuario(email,nombre,apellido,password), id:'signupfor',class:'form-horizontal'}
+		                        			                                  
 		                                <div class="form-group">
-		                                    <label for="email" class="col-md-3 control-label">Email</label>
+		                                
+		                                	<span id="errorEmail">
+		                                    	
+		                                    </span>	
+		                                    <br>
+		                                	 <label for="email" class="col-md-3 control-label">Email:</label>
+		                                   
+		                                	 
+		                                   
 		                                    <div class="col-md-9">
-		                                        <input type="text" class="form-control" name="email" placeholder="Ingrese su email" required>
+		                                        <input type="email" id="email" class="form-control" name="email" placeholder="Ingrese su email" required>
 		                                    </div>
+		                                    
+		                                    
 		                                </div>
 		                                    
 		                                <div class="form-group">
-		                                    <label for="firstname" class="col-md-3 control-label">Nombre</label>
+		                                    <label for="firstname" class="col-md-3 control-label">Nombre:</label>
 		                                    <div class="col-md-9">
 		                                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">
-		                                    <label for="lastname" class="col-md-3 control-label">Apellido</label>
+		                                    <label for="lastname" class="col-md-3 control-label">Apellido:</label>
 		                                    <div class="col-md-9">
 		                                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" required>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">
-		                                    <label for="password" class="col-md-3 control-label">Contraseña</label>
+		                                    <label for="password" class="col-md-3 control-label">Contraseña:</label>
 		                                    <div class="col-md-9">
 		                                        <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
 		                                    </div>
@@ -116,7 +191,7 @@
 		                                <div class="form-group">
 		                                    <!-- Button -->                                        
 		                                    <div class="col-md-offset-3 col-md-9">
-		                                        <button id="btn-signup" type="submit" class="btn btn-info" onclick="confirmar();"><i class="icon-hand-right"></i> &nbsp Registrar</button>
+		                                        <button id="btn-signup" type="submit" class="btn btn-primary" >Registrar</button>
 		                                    </div>
 		                                </div>
 		                           #{/form}
@@ -130,27 +205,11 @@
 		    </div>
     <br><br>
     
-    <!-- VENTANA MODAL DE CONFIRMACION DE REGISTRO -->
-       <div id="registro" class="modal fade">
-	   <div class="modal-dialog">   
-	      <div class="modal-content"> 
-	         <div class="modal-header">
-	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-	            ×
-	            </button>
-	            <h3>Mensaje</h3>
-	         </div>
-	         <div class="modal-body">
-	            <h4>Cuenta Registrada Exitosamente</h4>
-	            <p>Ahora ya puede iniciar sesión!</p>                
-	         </div>
-	         <div class="modal-footer">
-	            <a href="#" class="btn btn-success" data-dismiss="modal" >Aceptar</a>
-	         </div>
-	   	</div>
-	   </div>
-	</div>
+ 
+
+
 	
+
 	<script>
 	function confirmar(){
 		$('#registro').modal({
