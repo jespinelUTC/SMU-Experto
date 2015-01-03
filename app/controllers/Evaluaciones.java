@@ -25,14 +25,15 @@ public class Evaluaciones extends Controller{
 
 	
 	public static void index(){
+		Usuario user = Usuario.find("byEmail", Security.connected()).first();
 		//obteniendo datos del usuario que ha iniciado sesion
 		if(Security.isConnected()) {
-	        Usuario user = Usuario.find("byEmail", Security.connected()).first();
+	        
 	        renderArgs.put("user", user.nombre+" "+user.apellido);
 	    }
 		
 		
-		List <Evaluacion> evaluaciones= Evaluacion.find("order by id desc").fetch();
+		List <Evaluacion> evaluaciones= Evaluacion.find("byUsuario",user).fetch();
 		render(evaluaciones);
 	}
 	
@@ -52,7 +53,7 @@ public class Evaluaciones extends Controller{
 	
 	
 	public static void postCreate(String nombreSitio){
-		
+		Usuario u=Usuario.find("byEmail", Security.connected()).first();
 		Date fecha=new Date(); 
 		Dato datos=new Dato();
 		datos.nombreSitio=nombreSitio;
@@ -62,7 +63,7 @@ public class Evaluaciones extends Controller{
 		
 		String cadenaFecha = new SimpleDateFormat("yyyy-MM-dd").format(fecha);
 	
-		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto);
+		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto,u);
 		evaluacion.save();
 		
 		redirect("/evaluaciones");
