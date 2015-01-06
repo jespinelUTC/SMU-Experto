@@ -34,7 +34,9 @@ public class Evaluaciones extends Controller{
 		
 		
 		List <Evaluacion> evaluaciones= Evaluacion.find("byUsuario",user).fetch();
+		Collections.reverse(evaluaciones);//dando la vuelta a los datos de la lista
 		render(evaluaciones);
+	
 	}
 	
 	

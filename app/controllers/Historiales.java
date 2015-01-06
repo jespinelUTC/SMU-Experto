@@ -1,8 +1,11 @@
 package controllers;
 
-import controllers.Securing.Security;
+import java.util.List;
+
+import models.Evaluacion;
 import models.Usuario;
 import play.mvc.Controller;
+import controllers.Securing.Security;
 
 public class Historiales extends Controller{
 	
@@ -15,8 +18,9 @@ public class Historiales extends Controller{
             renderArgs.put("user", user.nombre+" "+user.apellido);
         }
 		
+		List <Evaluacion> evaluaciones=Evaluacion.find("order by id desc").fetch(5);
 		
-		render();
+		render(evaluaciones);
 	}
 
 }
