@@ -20,7 +20,9 @@
 							<tr>
 								<td><a href="/items?idParametro=${parametro.id}">${parametro.nombre}</a></td>
 								<td>${parametro.informacion}</td>
-								<td><a href="@{Parametros.eliminarParametro}?idParam=${parametro.id}"><input type="button" value = Eliminar class="btn btn-danger "></a></td>																								
+								<td><a href="@{Parametros.eliminarParametro}?idParam=${parametro.id}" class="btn btn-danger"> 
+								<img src="@{'/public/images/eliminar.png'}">&nbsp; &nbsp;
+								 Eliminar</a></td>																								
 							<tr>
 						#{/list}
 					</table>					
@@ -34,7 +36,7 @@
 								Nombre:<br> <input type="text" name="nombre" required><br><br>
 								Detalles:<br>  
 								<textarea rows="3" cols="30" name="informacion" required></textarea><br>
-								<input type="submit" value="Enviar" class="btn btn-success ">
+								<button type="submit" class="btn btn-success "><img src="@{'/public/images/guardar.png'}" height="22px" width="22px"> Guardar</button>
 							</form>
 						</ul>
 						</div>				

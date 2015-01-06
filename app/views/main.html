@@ -105,20 +105,31 @@
 						      </a>
 			        		  
 			        		    <ul class="dropdown-menu">						    
-									 <li> <a href="#">Cuenta</a></li> 
+									 <li> <a href="/cuenta">Cuenta</a></li> 
 								     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
 							    </ul> 
 			           		</span>
                 
                 </span>
                 #{/if}
+                #{else}
+                 <span class="navbar-brand" id="usuarioCon">
+		 
+			        		   <a href="/login">
+									      <img src="@{'/public/images/usuario.png'}" alt="">
+									       <span style="font-size:11px;">Login</span>
+						      </a>
+                
+                </span>
+                
+                #{/else}
  
                 
                		
              
                 
             </div>
-        </div>    
+  
             
             
             
@@ -129,7 +140,7 @@
             	<a href="/" class="pull-left brand"><img  class="img-responsive" src="@{'/public/images/logo.png'}"></a>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/">inicio</a>
+                      <a href="/">inicio</a>
                     </li>
                     <li>
                         <a href="/historiales">historial</a>
@@ -143,7 +154,7 @@
                  	</li>
                     
                    
-	                   <!--  
+	                   <!--  INICIO/CIERRE DE SESION EN EL MENU
 	                   <li>
                    		 <li class="dropdown">
 						    <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
@@ -190,7 +201,7 @@
 				      </a>
 	        		  
 	        		    <ul class="dropdown-menu">						    
-							 <li> <a href="#">Cuenta</a></li> 
+							 <li> <a href="/cuenta">Cuenta</a></li> 
 						     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
 					    </ul> 
 	           		</span>
@@ -240,7 +251,7 @@
 	                    <strong>Universidad Técnica de Cotopaxi</strong>
 	                    <br>          
 	                    Copyright &copy; René Quisaguano, Edgar Acurio, David Criollo<br>
-	                    2014
+	                    2014 - 2015
                     </p>
                 </div>
             </div>

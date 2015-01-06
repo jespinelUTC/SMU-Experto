@@ -1,0 +1,75 @@
+#{extends 'main.html' /}
+#{set title:'Cuenta' /}
+
+
+<div class="container">
+		<div class="col-md-3">
+		</div>
+	
+			<div class="col-md-5">
+			
+				                 <div class="panel panel-info">
+					                        <div class="panel-heading">
+					                            <div class="panel-title"><b>Datos Actuales</b></div>
+					                         
+					                        </div>  
+					                        <div class="panel-body" >
+					                        
+					                        
+					                        
+					                        		
+					  #{form @Security.guardarUsuario(email,nombre,apellido,password), id:'signupfor',class:'form-horizontal'}
+					                        			      
+					             
+					                        		                           
+					                                <div class="form-group">
+					                                    <br>
+					                                	 <label for="email" class="col-md-3 control-label">Email:</label>
+					                                    <div class="col-md-3">
+					                                       <label>${user1.email}</label>
+					                                    </div>		                                    
+					                                </div>
+					                                </center>
+					                                    
+					                                <div class="form-group">
+					                                    <label for="firstname" class="col-md-3 control-label">Nombre:</label>
+					                                    <div class="col-md-9">
+					                                        <input type="text" class="form-control" name="nombre" value="${user1.nombre}" placeholder="Ingrese su nombre" required>
+					                                    </div>
+					                                </div>
+					                                <div class="form-group">
+					                                    <label for="lastname" class="col-md-3 control-label">Apellido:</label>
+					                                    <div class="col-md-9">
+					                                        <input type="text" class="form-control" name="apellido" value="${user1.apellido}" placeholder="Ingrese su apellido" required>
+					                                    </div>
+					                                </div>
+					                                
+					                                 <div class="form-group">
+					                                    <label for="password" class="col-md-3 control-label">Contraseña Actual:</label>
+					                                    <div class="col-md-9">
+					                                        <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña actual" required>
+					                                    </div>
+					                                </div>
+					                                
+					                                
+					                                <div class="form-group">
+					                                    <label for="password" class="col-md-3 control-label">Contraseña Nueva:</label>
+					                                    <div class="col-md-9">
+					                                        <input type="password" class="form-control" name="passwordNuevo" placeholder="Ingrese su contraseña nueva" required>
+					                                    </div>
+					                                </div>
+					
+					                                <div class="form-group">
+					                                    <!-- Button -->                                        
+					                                    <div class="col-md-offset-3 col-md-9">
+					                                        <button id="btn-signup" type="submit" class="btn btn-warning" style="color:black; font-style: bold;" ><img src="@{'/public/images/cuenta.png'}">  ACTUALIZAR DATOS</button>
+					                                    </div>
+					                                </div>
+					                           #{/form}
+					                        
+					                      
+					                         </div>
+					                    </div>
+			</div>
+		
+	</div>

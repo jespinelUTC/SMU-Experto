@@ -1,7 +1,10 @@
 package controllers;
 
+
 import models.Usuario;
-import play.mvc.Controller;
+import play.mvc.With;
+
+
 
 public class Security extends Securing.Security {
 	
@@ -30,6 +33,17 @@ public class Security extends Securing.Security {
 		   }else{
 			   render();
 		   }
+	}
+
+	public static void cuenta(){
+		 Usuario user1 = Usuario.find("byEmail", Security.connected()).first();
+		//obteniendo datos del usuario que ha iniciado sesion
+		if(Security.isConnected()) {
+           
+            renderArgs.put("user", user1.nombre+" "+user1.apellido);
+        }
+	
+		render(user1);
 	}
 
 }

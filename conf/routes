@@ -30,6 +30,9 @@
 #Importar rutas de seguridad
 *	/login									Securing.login
 
+#Configuracion de cuenta
+* 	/cuenta									Security.cuenta
+
 #PARA Datos
 *  /datos									Datos.index
 
