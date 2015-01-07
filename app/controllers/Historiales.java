@@ -19,7 +19,7 @@ public class Historiales extends Controller{
         }
 		
 		List <Evaluacion> evaluaciones=Evaluacion.find("order by id desc").fetch(5);
-		
+
 		render(evaluaciones);
 	}
 
