@@ -88,5 +88,15 @@ public class Evaluaciones extends Controller{
 		
 	}
 	
+	public static void formulario(){
+		Usuario user = Usuario.find("byEmail", Security.connected()).first();
+		//obteniendo datos del usuario que ha iniciado sesion
+		if(Security.isConnected()) {
+	        
+	        renderArgs.put("user", user.nombre+" "+user.apellido);
+	    }
+		render();
+	}
+	
 	
 }
