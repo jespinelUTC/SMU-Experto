@@ -17,7 +17,7 @@
 					#{if itms}
 						#{list items:itms, as:'lista'}
 						<tr>
-						<td>${lista.pregunta}</td><td><a href="@{Items.eliminarItem}?idItem=${lista.id}"><input type="button" value = Eliminar class="btn btn-danger "></a><td>
+						<td>${lista.pregunta}</td><td><a href="@{Items.eliminarItem(lista.id)}"><input type="button" value = Eliminar class="btn btn-danger "></a><td>
 						<tr>
 						#{/list}
 					#{/if}
