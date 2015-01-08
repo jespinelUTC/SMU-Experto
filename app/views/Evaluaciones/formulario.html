@@ -2,6 +2,35 @@
 #{extends 'main.html' /}
 #{set title:'Formulario del Análisis'/}
 
+<script type="text/javascript">
+	$(document).ready(function(){
+			
+	
+		 $(".matriz").hide(); 
+		 $("#1").fadeIn("slow");
+		 
+
+		
+	});
+	
+	 
+	 $("#1").click(function(){
+			alert("click");	
+			return true;
+		});
+	 
+	
+	
+	
+	
+	
+
+
+</script>
+
+
+
+
 <div class="container">
 
 <div class="row">
@@ -11,44 +40,32 @@
 			<center>
 				<ul class="pagination">
 				  <li><a href="#">&laquo;</a></li>
-				  <li><a href="#">1</a></li>
-				  <li><a href="#">2</a></li>
-				  <li><a href="#">3</a></li>
-				  <li><a href="#">4</a></li>
-				  <li><a href="#">5</a></li>
+				  	#{if parametros}
+						%{int contador=1;}%
+							#{list items:parametros, as:'parametro'}
+								%{String funcion="mostrar("+contador+");";}%
+							  <li><a>${contador}</a></li>
+							  
+							  
+							 %{contador+=1;}%		
+							#{/list}
+					#{/if}
 				  <li><a href="#">&raquo;</a></li>
 				</ul>
 			</center>
 		</div>
-		
-		
-	
-		
-		
-		<br>
-		<br>
-		
-		<div id="capa">Al hacer click en el enlace de abajo... este div desaparecerá!</div>
-		<a href="javascript:$('#capa').fadeOut('slow');">Ocultar el div</a>
-		<a href="javascript:$('#capa').fadeIn('slow');">Mostrar de nuevo el div</a>
-		
-		
-	</div>
-</div>
 
-
-<div class="row">
-	<div class="box">
-		
 			<div class="col-lg-3"></div>
 			<div class="col-lg-6">
 				#{if parametros}
+				%{int contador=1;}%
 					#{list items:parametros, as:'parametro'}
-						<div  class="matriz">
+					
+						<div  class="matriz" id="${contador}">
 							
 								<table class="table table-stripped table-hover table-border">
 									<tr>
-										<td colspan="2"><h3>${parametro.nombre}</h3></td>
+										<td colspan="2"><h3>${contador}. ${parametro.nombre}</h3></td>
 									</tr>
 									
 									#{list items:items, as: 'item'}
@@ -56,7 +73,7 @@
 										<tr>
 											<td>${item.pregunta} </td>
 											<td>
-												<select name="calificacion" id="calificacion">
+												<select name="">
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
@@ -76,6 +93,7 @@
 							<br>
 	
 						</div>
+						%{contador+=1;}%
 					
 					#{/list}
 					
