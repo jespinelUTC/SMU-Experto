@@ -10,6 +10,10 @@ import play.mvc.*;
 public class Parametros extends Controller {
 		
     public static void index() {
+    	if(Security.isConnected()) {
+            Usuario user = Usuario.find("byEmail", Security.connected()).first();
+            renderArgs.put("user", user.nombre+" "+user.apellido);
+        }
     	List<Parametro> par =Parametro.findAll();
         render(par);
     }
@@ -27,27 +31,19 @@ public class Parametros extends Controller {
     	
 		Parametro par = new Parametro(nombre, informacion);
 		par.save();		
-		index();
+		redirect("/parametros");
 	}
     public static void eliminarParametro(Long idParam) {
-		Parametro eliminar = Parametro.findById(idParam);
-		String msg;
+		Parametro eliminar = Parametro.findById(idParam);		
 		try {
 			eliminar.delete();
-			msg="Se elimino correctamente";
+			flash.success("No Error.");
+			//msg="Se elimino correctamente";
 		} catch (Exception e) {
 			e.printStackTrace();
-			msg="No se ha podido eliminar";
+			flash.success("Error.");
+			//msg="No se ha podido eliminar";
 		}		
-		index(msg);
-	}
-    public static void index(String msg) {
-    	//Para mostrar el usuario conectado
-    	if(Security.isConnected()) {
-            Usuario user = Usuario.find("byEmail", Security.connected()).first();
-            renderArgs.put("user", user.nombre+" "+user.apellido);
-        }
-    	List<Parametro> par =Parametro.findAll();
-		render(msg,par);
-	}
+		redirect("/parametros");
+	}      
 }
