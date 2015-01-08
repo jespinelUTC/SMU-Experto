@@ -9,7 +9,7 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function(){
-			$('#btn-signup').attr("disabled", "disabled");
+			//$('#btn-signup').attr("disabled", "disabled");
 			var errorAction = #{jsAction @Security.error1(':mail')/}
 			
 			$('#email').keyup(function(){
