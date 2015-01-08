@@ -6,13 +6,17 @@ import java.util.Date;
 import models.Contexto;
 import models.Dato;
 import models.Evaluacion;
+import models.Parametro;
 import models.Usuario;
+import models.Item;
 
 import org.junit.Before;
 
 import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
 
 import java.util.*;
+
+
 
 import controllers.Securing.Security;
 import play.mvc.Controller;
@@ -89,13 +93,18 @@ public class Evaluaciones extends Controller{
 	}
 	
 	public static void formulario(){
-		Usuario user = Usuario.find("byEmail", Security.connected()).first();
+		
 		//obteniendo datos del usuario que ha iniciado sesion
 		if(Security.isConnected()) {
-	        
+			Usuario user = Usuario.find("byEmail", Security.connected()).first();
 	        renderArgs.put("user", user.nombre+" "+user.apellido);
 	    }
-		render();
+		List<Parametro> parametros=Parametro.all().fetch();
+		List<Item> items = Item.all().fetch();
+		
+
+		
+		render(parametros,items);
 	}
 	
 	
