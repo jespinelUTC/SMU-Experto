@@ -16,17 +16,17 @@ $(document).ready(function(){
 		var op=$("#sltPlataforma").val();
 		if (op == 'Web'){
 			$('#msj1').text('Dirección del sitio (url): ');
-			$('#direccion').attr("placeholder", "Ejemplo: www.abcde.com").placeholder();
+			$('#direccion').attr("placeholder", "Ejemplo: www.bbc.com").placeholder();
 		}
 		
 		if (op == 'Móvil'){
-			$('#msj1').text('Nombre de la aplicación: ');
-			$('#direccion').attr("placeholder", "Ejemplo: whatsapp" ).placeholder();
+			$('#msj1').text('Versión: ');
+			$('#direccion').attr("placeholder", "Ejemplo: versión 1.0" ).placeholder();
 		}
 		
 		if (op == 'Desktop'){
-			$('#msj1').text('Nombre de la aplicación: ');
-			$('#direccion').attr("placeholder", "Ejemplo: audacity" ).placeholder();
+			$('#msj1').text('Versión: ');
+			$('#direccion').attr("placeholder","Ejemplo: versión 1.0"  ).placeholder();
 		}
 	});
 });
@@ -34,110 +34,128 @@ $(document).ready(function(){
 </script>
 
 
+<style>
 
-<div class="container">
+</style>
 
-  <div class="row">
+<div class="container"> 
+
+<div class="col-md-3">
+		</div>
+	
+			<div class="col-md-8">
   			#{form @Evaluaciones.formulario()}	
-            <div class="box">
-            
-            
-				<div class="col-lg-12">
 
-				 
-				
-				<h3 class="text-center">Datos del Análisis</h3>	
-					
-					<center>
-						Plataforma: 
-						
-						<select id="sltPlataforma">
-							<option>Web</option>
-							<option>Móvil</option>
-							<option>Desktop</option>
-						
-						</select>
-						 <br>
-						  <br>
-						 
-						 <span id="msj1">Dirección del sitio (url):</span>
-						 <input type="text" name="direccion" id="direccion" required placeholder="Ejemplo: www.abcde.com">
-					
-						
-					
-					</center>
-											
-				</div>
-				
+            
+  	              
+	              <div class="panel panel-info" style="background: rgba(255, 255, 255, .9);">
+	  
+					 
+						<div class="panel-heading">
+						<h3 class="text-center">Datos del Análisis</h3>	
+						</div>
 			
-				<div class="col-lg-12">
-					
-				<h3 class="text-center">Objetivo del Análisis</h3>	
-				
-					<center>
-				
-						<textarea rows="3" cols="43"></textarea>
-					</center>
-				
-				</div>
-				
-				
-				
-				
-					<div class="col-lg-12">
-					
-						<h3 class="text-center">Tareas del Análisis</h3>	
 						
-						<center>
-				
+							<div class="panel-body" >
+							
+							
+							  <div class="form-group">
+                                
+                             	 <label for="" class="col-md-5 control-label text-right">Plataforma: </label>
+                                 <div class="col-md-5">
+                                    	<select id="sltPlataforma" class="form-control selectpicker">
+											<option>Web</option>
+											<option>Móvil</option>
+											<option>Desktop</option>
+										</select>
+		
+                                 </div>		                                    
+                             </div>
+                             
+                             <br>
+                             <br>
+                             
+							<div class="form-group">
+							 <label for="" class="col-md-5 control-label text-right" id="msj1">Dirección del sitio (url): </label>
+                                 <div class="col-md-5">
+                                    	 <input  type="text" name="direccion" id="direccion" class="form-control" required placeholder="Ejemplo: www.bbc.com">
+		
+                                 </div>			
+							
+							</div>
+							
+							
+								<br>
+							    <br>
+                             
+							<div class="form-group">
+							 <label for="" class="col-md-5 control-label text-right" id="msj1">Objetivo del Análisis: </label>
+                                 <div class="col-md-5">
+                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
+					
+                                 </div>			
+							
+							</div>
 								
-								<center>
-									<textarea rows="3" cols="43"></textarea>	
-								</center>
 							
-						</center>
-				
-						
-					</div>
-
+                             
+							<div class="form-group">
+							 <label for="" class="col-md-5 control-label text-right" id="msj1"><br>Tareas del Análisis: </label>
+                                 <div class="col-md-5">
+                                 			<br>
+                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
 					
-					
-					
-						<h3 class="text-center">Pantallas del Análisis</h3>	
-						
+                                 </div>			
+							
+							</div>
+							
+							
+							
+							
+							<div class="form-group">
+							 <label for="" class="col-md-5 control-label text-right" id="msj1">
+							<br>Pantallas del Análisis: </label>
+                                 <div class="col-md-5">
+                               				 <br>
+                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
+										<br>
+                                 </div>			
+								
+							</div>
+							
+							
+							
 						<center>
+	                        <button type="submit" class=' btn btn-success'>
+						 	<img src="@{'/public/images/guardar.png'}" height="22px" width="22px">&nbsp; 
+						 	<b style="color:black">Guardar y Continuar</b>
+						 	</button>
+						 	<br><br>
+						 	<a class='btn btn-warning' href="/evaluaciones" onclick="return confirm('¿Está seguro que desea cancelar la evaluación?');" >
+						 	 	 <img src="@{'/public/images/cancelar.png'}">&nbsp; 
+							 	 <b style="color:black"> Cancelar</b>
+							</a>
+						 
+					 	   
+						 </center>
+					
+						 	
+						 </div>	<!--panel body  -->
+					 
+					 </div><!--panel info  -->
+					 	
+					
+						
+			
 				
-							<textarea rows="3" cols="43"></textarea>
-							
-							<br><br>
-							
-						
-						
-						
-						<button type="submit" class=' btn btn-success'>
-					 	<img src="@{'/public/images/guardar.png'}" height="22px" width="22px">&nbsp; 
-					 	<b style="color:black">Guardar y Continuar</b>
-					 	
-					 	</button>
-					 	&nbsp; &nbsp;
-					 	
-					 	 <a class='btn btn-warning' href="/evaluaciones" >
-					 	 	<img src="@{'/public/images/cancelar.png'}">&nbsp; 
-					 	 <b style="color:black"> Cancelar</b>
-					 	   </a>
-					 	
-					 	
-					 	</center>
-				
-						
-					</div>
-					#{/form}
+				#{/form}
+		</div><!--  col md 5-->
 					
 
 				
-			</div>
-			
-	</div>
+</div> <!-- container -->
+	
+					
 	
 	
 

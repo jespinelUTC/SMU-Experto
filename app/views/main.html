@@ -74,116 +74,117 @@
     <body>
     
     
-	<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    
-    
-        <div class="container">
-        
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                
-               <div class="navbar-brand">
-	                <a  href="/"><img height="35px" width="35px" src="@{'/public/images/favicon.png'}"> 
-	                <span style="color:black; font-size:14px;">SMU-Experto</span></a>
-                </div>
-                 #{if user}
-                <span class="navbar-brand" id="usuarioCon">
-		                <span class="dropdown">
-			           			 <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
-									      <img src="@{'/public/images/usuario.png'}" alt="">
-									       <span style="font-size:11px;">${user}</span>
-						        <b class="caret"></b>
-						      </a>
-			        		  
-			        		    <ul class="dropdown-menu">						    
-									 <li> <a href="/cuenta">Cuenta</a></li> 
-								     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
-							    </ul> 
-			           		</span>
-                
-                </span>
-                #{/if}
-                #{else}
-                 <span class="navbar-brand" id="usuarioCon">
+    <header>
+			<!-- Navigation -->
+		    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		    
+		    
+		        <div class="container">
+		        
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                
+		                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+		                
+		               <div class="navbar-brand">
+			                <a  href="/"><img height="35px" width="35px" src="@{'/public/images/favicon.png'}"> 
+			                <span style="color:black; font-size:14px;">SMU-Experto</span></a>
+		                </div>
+		                 #{if user}
+		                <span class="navbar-brand" id="usuarioCon">
+				                <span class="dropdown">
+					           			 <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
+											      <img src="@{'/public/images/usuario.png'}" alt="">
+											       <span style="font-size:11px;">${user}</span>
+								        <b class="caret"></b>
+								      </a>
+					        		  
+					        		    <ul class="dropdown-menu">						    
+											 <li> <a href="/cuenta">Cuenta</a></li> 
+										     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
+									    </ul> 
+					           		</span>
+		                
+		                </span>
+		                #{/if}
+		                #{else}
+		                 <span class="navbar-brand" id="usuarioCon">
+				 
+					        		   <a href="/login">
+											      <img src="@{'/public/images/usuario.png'}" alt="">
+											       <span style="font-size:11px;">Login</span>
+								      </a>
+		                
+		                </span>
+		                
+		                #{/else}
 		 
-			        		   <a href="/login">
-									      <img src="@{'/public/images/usuario.png'}" alt="">
-									       <span style="font-size:11px;">Login</span>
-						      </a>
-                
-                </span>
-                
-                #{/else}
- 
-                
-               		
-             
-                
-            </div>
-  
-            
-            
-            
-            
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            
-            	<a href="/" class="pull-left brand"><img  class="img-responsive" src="@{'/public/images/logo.png'}"></a>
-                <ul class="nav navbar-nav">
-                    <li>
-                      <a href="/">inicio</a>
-                    </li>
-                    <li>
-                        <a href="/historiales">historial</a>
-                    </li>
-                    <li>
-                        <a href="/evaluaciones">evaluar</a>
-                    </li>
-                    
-                     <li>
-                 		<a href="/parametros">Heuristicas</a>
-                 	</li>
-                    
-                   
-	                   <!--  INICIO/CIERRE DE SESION EN EL MENU
-	                   <li>
-                   		 <li class="dropdown">
-						    <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
-						        Sesión
-						        <b class="caret"></b>
-						      </a>
-						    <ul class="dropdown-menu">						    
-							    #{if user}
-							     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
-							    #{/if}
-							    #{else}
-							    <li> <a href="/login">Iniciar Sesión</a></li> 
-							    #{/else}
-						    </ul> 
-						  </li>
-	                        
-                    </li>
-                     -->
-                               	
-                </ul>
-                
-                
-              
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    
+		                
+		               		
+		             
+		                
+		            </div>
+		  
+		            
+		            
+		            
+		            
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            
+		            	<a href="/" class="pull-left brand"><img  class="img-responsive" src="@{'/public/images/logo.png'}"></a>
+		                <ul class="nav navbar-nav">
+		                    <li>
+		                      <a href="/">inicio</a>
+		                    </li>
+		                    <li>
+		                        <a href="/historiales">historial</a>
+		                    </li>
+		                    <li>
+		                        <a href="/evaluaciones">evaluar</a>
+		                    </li>
+		                    
+		                     <li>
+		                 		<a href="/parametros">Heuristicas</a>
+		                 	</li>
+		                    
+		                   
+			                   <!--  INICIO/CIERRE DE SESION EN EL MENU
+			                   <li>
+		                   		 <li class="dropdown">
+								    <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
+								        Sesión
+								        <b class="caret"></b>
+								      </a>
+								    <ul class="dropdown-menu">						    
+									    #{if user}
+									     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
+									    #{/if}
+									    #{else}
+									    <li> <a href="/login">Iniciar Sesión</a></li> 
+									    #{/else}
+								    </ul> 
+								  </li>
+			                        
+		                    </li>
+		                     -->
+		                               	
+		                </ul>
+		                
+		                
+		              
+		            </div>
+		            <!-- /.navbar-collapse -->
+		        </div>
+		        <!-- /.container -->
+		    </nav>
+    </header>
     
     
     
@@ -197,9 +198,9 @@
 	           			 <a class="dropdown-toggle"  data-toggle="dropdown"   href="#">
 							      <img src="@{'/public/images/usuario.png'}" alt="">
 							       ${user}
-				        <b class="caret"></b>
-				      </a>
-	        		  
+					        <b class="caret"></b>
+					      </a>
+		        		  
 	        		    <ul class="dropdown-menu">						    
 							 <li> <a href="/cuenta">Cuenta</a></li> 
 						     <li> <a href="@{Securing.logout()}">Cerrar Sesión</a></li>
@@ -213,22 +214,12 @@
 					<span id="usuarioConectado" class="navbar-collapse collapse navbar-fixed-top"  style='text-align: right; margin-top:10px;' >
 	           				<a href="/login">
         				  <img src="@{'/public/images/usuario.png'}" alt="">
-					      <span>Ingresar - Registrar</span>
+					      Ingresar - Registrar
 					      </a>
-           		</span>
+           			</span>
 			#{/else}
 			
 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
  
     <br><br> <br><br><br>       
     
