@@ -37,11 +37,11 @@ public class Parametros extends Controller {
 		Parametro eliminar = Parametro.findById(idParam);		
 		try {
 			eliminar.delete();
-			flash.success("No Error.");
+			flash.success("Se elimino correctamente.");
 			//msg="Se elimino correctamente";
 		} catch (Exception e) {
 			e.printStackTrace();
-			flash.success("Error.");
+			flash.success("No se pudo eliminar.");
 			//msg="No se ha podido eliminar";
 		}		
 		redirect("/parametros");
