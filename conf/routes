@@ -38,3 +38,6 @@
 
 #Para error de email
 *  /error1									Security.error1
+
+#Para slider
+*  /slider									Application.slider
