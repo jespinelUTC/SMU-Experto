@@ -26,6 +26,8 @@
 *	/parametros							    Parametros.index
 #Ruta de items
 *	/items							    	Items.index
+#Ruta de items
+*	/calificaciones					    	Calificaciones.index
 
 #Importar rutas de seguridad
 *	/login									Securing.login
