@@ -19,14 +19,7 @@ import controllers.Securing.Security;
 
 @With(Securing.class)
 public class Evaluaciones extends Controller{
-	
-	 
-
-	
-	
-	
-	
-	
+		
 	public static void index(){
 		Usuario user = Usuario.find("byEmail", Security.connected()).first();
 		//obteniendo datos del usuario que ha iniciado sesion
