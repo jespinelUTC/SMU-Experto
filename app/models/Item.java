@@ -10,6 +10,7 @@ import java.util.*;
 @Entity
 public class Item extends Model {
 	public String pregunta;
+	//public int calificacion;
 	@ManyToOne
 	public Parametro parametro;
 	public Item(String pregunta, Parametro parametro) {

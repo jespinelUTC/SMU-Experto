@@ -39,5 +39,9 @@
 #Para error de email
 *  /error1									Security.error1
 
+#Para resultados
+*  /resultados								Resultados.index
+
+
 #Para slider
 *  /slider									Application.slider

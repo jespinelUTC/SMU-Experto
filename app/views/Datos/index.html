@@ -12,21 +12,21 @@ $(document).ready(function(){
 		
 	});
 	
-	$("#sltPlataforma").change(function(){
-		var op=$("#sltPlataforma").val();
+	$("#plataforma").change(function(){
+		var op=$("#plataforma").val();
 		if (op == 'Web'){
 			$('#msj1').text('Dirección del sitio (url): ');
-			$('#direccion').attr("placeholder", "Ejemplo: www.bbc.com").placeholder();
+			$('#url').attr("placeholder", "Ejemplo: www.bbc.com").placeholder();
 		}
 		
 		if (op == 'Móvil'){
 			$('#msj1').text('Versión: ');
-			$('#direccion').attr("placeholder", "Ejemplo: versión 1.0" ).placeholder();
+			$('#url').attr("placeholder", "Ejemplo: versión 1.0" ).placeholder();
 		}
 		
 		if (op == 'Desktop'){
 			$('#msj1').text('Versión: ');
-			$('#direccion').attr("placeholder","Ejemplo: versión 1.0"  ).placeholder();
+			$('#url').attr("placeholder","Ejemplo: versión 1.0"  ).placeholder();
 		}
 	});
 });
@@ -42,9 +42,10 @@ $(document).ready(function(){
 
 <div class="col-md-3">
 		</div>
+		
 	
 			<div class="col-md-8">
-  			#{form @Evaluaciones.formulario()}	
+  			#{form @Evaluaciones.formulario(plataforma,url,objetivo,tareas,pantallas,idEvaluacion)}	
 
             
   	              
@@ -53,6 +54,8 @@ $(document).ready(function(){
 					 
 						<div class="panel-heading">
 						<h3 class="text-center">Datos del Análisis</h3>	
+						 <h3 class="text-center">${evaluacion.dato.nombreSitio}</h3>
+						 <input type="hidden" value="${evaluacion.id}" name="idEvaluacion" id="idEvaluacion">	
 						</div>
 			
 						
@@ -63,7 +66,7 @@ $(document).ready(function(){
                                 
                              	 <label for="" class="col-md-5 control-label text-right">Plataforma: </label>
                                  <div class="col-md-5">
-                                    	<select id="sltPlataforma" class="form-control selectpicker">
+                                    	<select name="plataforma" id="plataforma" class="form-control selectpicker">
 											<option>Web</option>
 											<option>Móvil</option>
 											<option>Desktop</option>
@@ -78,7 +81,7 @@ $(document).ready(function(){
 							<div class="form-group">
 							 <label for="" class="col-md-5 control-label text-right" id="msj1">Dirección del sitio (url): </label>
                                  <div class="col-md-5">
-                                    	 <input  type="text" name="direccion" id="direccion" class="form-control" required placeholder="Ejemplo: www.bbc.com">
+                                    	 <input  type="text" name="url" id="url" class="form-control" required placeholder="Ejemplo: www.bbc.com">
 		
                                  </div>			
 							
@@ -91,7 +94,7 @@ $(document).ready(function(){
 							<div class="form-group">
 							 <label for="" class="col-md-5 control-label text-right" id="msj1">Objetivo del Análisis: </label>
                                  <div class="col-md-5">
-                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
+                                    		<textarea rows="3" cols="43" name="objetivo" id="objetivo" required class="form-control"></textarea>
 					
                                  </div>			
 							
@@ -103,7 +106,7 @@ $(document).ready(function(){
 							 <label for="" class="col-md-5 control-label text-right" id="msj1"><br>Tareas del Análisis: </label>
                                  <div class="col-md-5">
                                  			<br>
-                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
+                                    		<textarea name="tareas" rows="3" cols="43" required class="form-control"></textarea>
 					
                                  </div>			
 							
@@ -117,7 +120,7 @@ $(document).ready(function(){
 							<br>Pantallas del Análisis: </label>
                                  <div class="col-md-5">
                                				 <br>
-                                    		<textarea rows="3" cols="43" required class="form-control"></textarea>
+                                    		<textarea name="pantallas" id="pantallas"rows="3" cols="43" required class="form-control"></textarea>
 										<br>
                                  </div>			
 								

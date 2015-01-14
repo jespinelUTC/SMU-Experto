@@ -5,6 +5,7 @@ import java.util.Date;
 
 import controllers.Securing.Security;
 import models.Dato;
+import models.Evaluacion;
 import models.Usuario;
 import play.mvc.*;
 
@@ -12,7 +13,7 @@ public class Datos extends Controller {
 	
 	 static Dato d1;
 
-    public static void index() {
+    public static void index(Long id) {
     	
     	//obteniendo datos del usuario que ha iniciado sesion
     			if(Security.isConnected()) {
@@ -21,11 +22,13 @@ public class Datos extends Controller {
     	        }
     			if(d1 == null)
     				d1=new Dato();
+    	Evaluacion evaluacion=Evaluacion.findById(id);
     			
     	Dato d=d1;
-        render(d);
+        render(d,evaluacion);
     }
     
+    /*
     public static void guardarDatos(String fecha, String plataforma,String url,String nombreSitio){
 		d1=new Dato(plataforma,url,nombreSitio);
 		d1.save();
@@ -40,7 +43,7 @@ public class Datos extends Controller {
     	d1=new Dato();
     	index();
     }
-
+*/
     
 
 

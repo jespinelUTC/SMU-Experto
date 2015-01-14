@@ -4,11 +4,12 @@ import java.util.List;
 
 import models.Item;
 import models.Parametro;
-import play.mvc.*;
+import play.mvc.Controller;
 
 public class Items extends Controller {
 	
     public static void index(Long idParametro ) {
+
     	Parametro par= Parametro.findById(idParametro);
     	//User.find(“byUsername”, usr).first();
     	//List<Item> itms =Item.findAll();    	
