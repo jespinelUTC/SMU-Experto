@@ -151,7 +151,7 @@ public static void calificar(String res, Long id){
 
 	}
 	
-
+	redirect("/resultados?id="+evaluacion.id);
 	
 }
 	
