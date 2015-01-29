@@ -108,8 +108,8 @@ public class Securing extends Controller {
         response.removeCookie("rememberme");
         Security.invoke("onDisconnected");
         flash.success("secure.logout");
-        redirect("/");
-       // login();
+       // redirect("/");
+       login();
         
     }
 
