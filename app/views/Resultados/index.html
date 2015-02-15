@@ -1,5 +1,7 @@
 #{extends 'main.html' /}
 
+
+
 <div class="container">
 
 
@@ -113,7 +115,7 @@
 
 </div>
 
-#{list items:parametros, as:'parametro'}}
+#{list items:parametros, as:'parametro'}
 	<div class="row">
 		<div class="box">
 			
@@ -134,6 +136,8 @@
 										PTOS
 									</th>
 								</tr>
+									%{int cal=0;}%
+									
 									#{list items:resumen, as: 'r'}	
 									#{if parametro == r.item.parametro}
 									<tr>
@@ -142,10 +146,36 @@
 										</td>
 										<td>
 											${r.calificacion}
+											%{cal+=r.calificacion;}%
 										</td>
 									</tr>
 									#{/if}
 								#{/list}
+									<tr>
+										
+										
+										#{if cal<=15}
+											<td class="text-right" style="background-color: #FF4732; "><b>TOTAL:</b></td>
+											<td class="text-center" style="background-color: #FF4732;">
+												<b>${cal}/50</b>
+											</td>
+										#{/if}
+										
+										#{if (cal>=16 && cal<=25)}
+											<td class="text-right" style="background-color: #E8CE46;"><b>TOTAL:</b></td>
+											<td class="text-center" style="background-color: #E8CE46;">
+												<b>${cal}/50</b>
+											</td>
+										#{/if}
+										#{if (cal>=26)}
+											<td class="text-right" style="background-color: #5DFF7B;"><b>TOTAL:</b></td>
+											<td class="text-center" style="background-color: #5DFF7B;">
+												<b>${cal}/50</b>
+											</td>
+										#{/if}
+										
+										
+									</tr>
 								
 								</table>
 						</div>
@@ -159,7 +189,53 @@
 
 
 
+<div class="box">
+<h2 class="text-center">GRÁFICA DE LOS RESULTADOS</h2>
+<br><br>
 
+<canvas id="chart-area3" width="600px" height="200px"></canvas>
+
+<meta charset="utf-8">
+
+<script >
+	var barChartData = {
+		labels : [
+				#{list items:parametros, as:'parametro'}
+		          	"${parametro.nombre}",
+		         #{/list}
+		          ],
+		datasets : [
+			{
+				fillColor : "#6b9dfa",
+				strokeColor : "black",//bordes
+				highlightFill: "#1864f2",//hover
+				highlightStroke: "#ffffff",
+				data : [
+						#{list items:parametros, as:'parametro'}
+							%{int cal=0;}%
+							#{list items:resumen, as: 'r'}	
+								#{if parametro == r.item.parametro}
+									%{cal+=r.calificacion;}%
+								#{/if}
+							#{/list}	
+								${cal},
+						#{/list}
+				       ]
+			}
+		]
+
+	}	
+		
+var ctx3 = document.getElementById("chart-area3").getContext("2d");
+			
+window.myPie = new Chart(ctx3).Bar(barChartData, {
+	responsive:true,
+	
+	});
+
+</script>
+
+</div>
 
 
 

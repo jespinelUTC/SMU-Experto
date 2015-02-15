@@ -18,10 +18,15 @@
 					                        
 					                        
 					                        		
-					  #{form @Security.guardarUsuario(email,nombre,apellido,password), id:'signupfor',class:'form-horizontal'}
-					                        			      
-					             
-					                        		                           
+					  #{form @Security.modificarUsuario(nombre,apellido,password, passwordNuevo), id:'signupfor',class:'form-horizontal'}
+                           
+				                            		#{if flash.confirmacion}	
+														<span style="color:blue"><b>&{flash.confirmacion}</b></span>
+									             	 #{/if}
+									             	 #{if flash.error}	
+														<span style="color: red;"><b>&{flash.error}</b></span>
+									             	 #{/if}
+					             	 				
 					                                <div class="form-group">
 					                                    <br>
 					                                	 <label for="email" class="col-md-3 control-label">Email:</label>

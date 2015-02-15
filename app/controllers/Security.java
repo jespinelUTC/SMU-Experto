@@ -22,6 +22,22 @@ public class Security extends Securing.Security {
 		redirect("/evaluaciones");
 	}
 	
+	public static void modificarUsuario(String nombre,String apellido,String password, String passwordNuevo) throws Throwable{
+		
+		 Usuario user1 = Usuario.find("byEmail", Security.connected()).first();
+		 if(password.equals(user1.password)){
+			 user1.nombre=nombre;
+			 user1.apellido=apellido;
+			 user1.password=passwordNuevo;
+			 user1.save();
+			 flash("confirmacion","Datos Actualizados Exitosamente");
+		 }else{
+			 flash("error","Contraseña Incorrecta - No se pudo Actualizar");
+		 }
+		redirect("/cuenta");
+	}
+	
+	
 	
 	//error para email existente
 	public static void error1(String mail){
