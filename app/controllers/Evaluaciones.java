@@ -13,41 +13,59 @@ import models.Parametro;
 import models.Resultado;
 import models.Resultado_Item;
 import models.Usuario;
+<<<<<<< HEAD
+=======
+import models.Item;
+
+import org.junit.Before;
+
+import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
+
+import java.util.*;
+
+import controllers.Securing.Security;
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
 import play.mvc.Controller;
 import play.mvc.With;
 import controllers.Securing.Security;
 
 @With(Securing.class)
+<<<<<<< HEAD
 public class Evaluaciones extends Controller{
 		
 	public static void index(){
+=======
+public class Evaluaciones extends Controller {
+
+	public static void index() {
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
 		Usuario user = Usuario.find("byEmail", Security.connected()).first();
-		//obteniendo datos del usuario que ha iniciado sesion
-		if(Security.isConnected()) {
-	        
-	        renderArgs.put("user", user.nombre+" "+user.apellido);
-	    }
-		
-		
-		List <Evaluacion> evaluaciones= Evaluacion.find("byUsuario",user).fetch();
-		Collections.reverse(evaluaciones);//dando la vuelta a los datos de la lista
+		// obteniendo datos del usuario que ha iniciado sesion
+		if (Security.isConnected()) {
+
+			renderArgs.put("user", user.nombre + " " + user.apellido);
+		}
+
+		List<Evaluacion> evaluaciones = Evaluacion.find("byUsuario", user)
+				.fetch();
+		Collections.reverse(evaluaciones);// dando la vuelta a los datos de la
+											// lista
 		render(evaluaciones);
-	
+
 	}
-	
-	
-	public static void create(){
-		
-		
-		
-		//obteniendo datos del usuario que ha iniciado sesion
-				if(Security.isConnected()) {
-		            Usuario user = Usuario.find("byEmail", Security.connected()).first();
-		            renderArgs.put("user", user.nombre+" "+user.apellido);
-		        }
-				render();
-		
+
+	public static void create() {
+
+		// obteniendo datos del usuario que ha iniciado sesion
+		if (Security.isConnected()) {
+			Usuario user = Usuario.find("byEmail", Security.connected())
+					.first();
+			renderArgs.put("user", user.nombre + " " + user.apellido);
+		}
+		render();
+
 	}
+<<<<<<< HEAD
 	
 	
 	public static void postCreate(String nombreSitio){
@@ -62,32 +80,46 @@ public class Evaluaciones extends Controller{
 		datos.save();
 		
 		Contexto contexto=new Contexto();
+=======
+
+	public static void postCreate(String nombreSitio) {
+		Usuario u = Usuario.find("byEmail", Security.connected()).first();
+		Date fecha = new Date();
+		Dato datos = new Dato();
+		datos.nombreSitio = nombreSitio;
+		datos.save();
+		Contexto contexto = new Contexto();
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
 		contexto.save();
-		
+
 		String cadenaFecha = new SimpleDateFormat("yyyy-MM-dd").format(fecha);
+<<<<<<< HEAD
 	
 		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto,u,resultado);
+=======
+
+		Evaluacion evaluacion = new Evaluacion(cadenaFecha, datos, contexto, u);
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
 		evaluacion.save();
-		
+
 		redirect("/evaluaciones");
 
-		
 	}
-	
-	public static void delete(Long id){
-		
-		Evaluacion evaluacion=Evaluacion.findById(id);
-		Dato dato=Dato.findById(evaluacion.dato.id);
-		Contexto contexto=Contexto.findById(evaluacion.contexto.id);
-		//Agrgar eliminacion de los resultados
+
+	public static void delete(Long id) {
+
+		Evaluacion evaluacion = Evaluacion.findById(id);
+		Dato dato = Dato.findById(evaluacion.dato.id);
+		Contexto contexto = Contexto.findById(evaluacion.contexto.id);
+		// Agrgar eliminacion de los resultados
 		evaluacion.delete();
 		dato.delete();
 		contexto.delete();
-    	
-    	redirect("/evaluaciones");
-		
-		
+
+		redirect("/evaluaciones");
+
 	}
+<<<<<<< HEAD
 	
 	public static void formulario(String plataforma, String url,String objetivo, String tareas, String pantallas, Long idEvaluacion){
 		
@@ -119,9 +151,21 @@ public class Evaluaciones extends Controller{
 		
 		
 		List<Parametro> parametros=Parametro.all().fetch();
-		List<Item> items = Item.all().fetch();
-		
+=======
 
+	public static void formulario() {
+
+		// obteniendo datos del usuario que ha iniciado sesion
+		if (Security.isConnected()) {
+			Usuario user = Usuario.find("byEmail", Security.connected())
+					.first();
+			renderArgs.put("user", user.nombre + " " + user.apellido);
+		}
+		List<Parametro> parametros = Parametro.all().fetch();
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
+		List<Item> items = Item.all().fetch();
+
+<<<<<<< HEAD
 		
 		render(parametros,items,evaluacion);
 	}
@@ -156,4 +200,9 @@ public static void calificar(String res, Long id){
 }
 	
 	
+=======
+		render(parametros, items);
+	}
+
+>>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
 }
