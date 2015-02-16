@@ -68,7 +68,7 @@ public class Evaluaciones extends Controller{
 	
 		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto,u,resultado);
 		evaluacion.save();
-		
+		flash("creada","Registro creado exitosamente, ya puede iniciar el Test para "+nombreSitio);
 		redirect("/evaluaciones");
 
 		
@@ -80,10 +80,11 @@ public class Evaluaciones extends Controller{
 		Dato dato=Dato.findById(evaluacion.dato.id);
 		Contexto contexto=Contexto.findById(evaluacion.contexto.id);
 		//Agrgar eliminacion de los resultados
+		String evaluacionBorrada= evaluacion.dato.nombreSitio;
 		evaluacion.delete();
 		dato.delete();
 		contexto.delete();
-    	
+    	flash("borrada","La evaluación de "+evaluacionBorrada+" ha sido eliminada exitosamente");
     	redirect("/evaluaciones");
 		
 		
@@ -127,15 +128,13 @@ public class Evaluaciones extends Controller{
 	}
 	
 public static void calificar(String res, Long id){
-	Evaluacion evaluacion=Evaluacion.findById(id);
-	try{
 	
+	Evaluacion evaluacion=Evaluacion.findById(id);
 	Resultado resultado=evaluacion.resultado;
 	
 	String[] arrayResultados=res.split("/");
-
 	
-	
+	try{
 	for (int i=0;i<arrayResultados.length;i++){
 		//System.out.println(arrayResultados[i]);
 		
@@ -153,11 +152,10 @@ public static void calificar(String res, Long id){
 		
 
 	}
-	
-	redirect("/resultados?id="+evaluacion.id);
-	}catch( Exception ex){
-		redirect("/resultados?id="+evaluacion.id);
+	}catch(Exception ex){
+		
 	}
+	redirect("/resultados?id="+evaluacion.id);
 	
 }
 	

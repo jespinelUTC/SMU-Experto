@@ -23,9 +23,9 @@
 					</div>
 				</div>
 				
-				#{form @Evaluaciones.postCreate(nombreSitio)}
+				
 				 <div class="row">	
-					
+				#{form @Evaluaciones.postCreate(nombreSitio)}
 					<div class="col-lg-3" >
 						<input type="text" name="nombreSitio" required placeholder="Ingrese el nombre del sitio/aplicación a evaluar" class="form-control">
 						<br>
@@ -34,11 +34,31 @@
 						<button type="submit" class="btn btn-warning"> 
 							<img src="@{'/public/images/nuevo.png'}">&nbsp; &nbsp;
 							<b style="color:black">Agregar</b>
-						</button>
-						
+						</button><br>
+					</div>
+					<div class="5">
 					</div>
 					#{/form}
 					
+					<!-- Mensajes de Alerta -->
+					#{if flash.creada}
+					<div class="12" style="color:green;">
+					
+							<h5>&{flash.creada}</h5>
+						
+					</div>
+					#{/if}	
+					
+					#{if flash.borrada}
+					<div class="12" style="color:red;">
+					
+							<h5>&{flash.borrada}</h5>
+						
+					</div>
+					#{/if}		
+					
+					<!-- Fin de Mensajes de Alerta -->					
+						
 					
 					
 					
