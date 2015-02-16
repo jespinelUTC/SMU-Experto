@@ -127,11 +127,14 @@ public class Evaluaciones extends Controller{
 	}
 	
 public static void calificar(String res, Long id){
-	
 	Evaluacion evaluacion=Evaluacion.findById(id);
+	try{
+	
 	Resultado resultado=evaluacion.resultado;
 	
 	String[] arrayResultados=res.split("/");
+
+	
 	
 	for (int i=0;i<arrayResultados.length;i++){
 		//System.out.println(arrayResultados[i]);
@@ -152,6 +155,9 @@ public static void calificar(String res, Long id){
 	}
 	
 	redirect("/resultados?id="+evaluacion.id);
+	}catch( Exception ex){
+		redirect("/resultados?id="+evaluacion.id);
+	}
 	
 }
 	
