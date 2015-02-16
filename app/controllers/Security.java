@@ -13,11 +13,18 @@ public class Security extends Securing.Security {
 
 	public static void guardarUsuario(String email, String nombre,
 			String apellido, String password) throws Throwable {
-
-		Usuario u = new Usuario(email, nombre, apellido, password);
-		u.save();
-		Securing.authenticate(email, password, true);
-		redirect("/evaluaciones");
+			Usuario usuario=Usuario.find("byEmail",email).first();
+		if(usuario==null){
+			Usuario u = new Usuario(email, nombre, apellido, password);
+			u.save();
+			Securing.authenticate(email, password, true);
+			redirect("/evaluaciones");
+		}else{
+			flash("repetido", "No se pudo crear la cuenta, intente con otra dirección de Email");
+			redirect("/login");
+		}
+		
+		
 	}
 
 	
