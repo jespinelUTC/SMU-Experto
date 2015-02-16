@@ -19,7 +19,7 @@ public class Security extends Securing.Security {
 		Securing.authenticate(email, password, true);
 		redirect("/evaluaciones");
 	}
-<<<<<<< HEAD
+
 	
 	public static void modificarUsuario(String nombre,String apellido,String password, String passwordNuevo) throws Throwable{
 		
@@ -37,18 +37,7 @@ public class Security extends Securing.Security {
 	}
 	
 	
-	
-	//error para email existente
-	public static void error1(String mail){
-		   Usuario user = Usuario.find("byEmail", mail).first();
-		   String mensaje;
-		   if (user != null){
-			   mensaje="ERROR: EMAIL YA UTILIZADO";  
-			  render(mensaje);
-		   }else{
-			   render();
-		   }
-=======
+
 
 	// error para email existente
 	public static void error1(String mail) {
@@ -60,7 +49,7 @@ public class Security extends Securing.Security {
 		} else {
 			render();
 		}
->>>>>>> c6355e5a6a17f7e6a7140cfb407bcc0382c2bff7
+
 	}
 
 	public static void cuenta() {
