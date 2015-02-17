@@ -86,9 +86,15 @@
 	            	<div class="table-responsive">
 					<table class="table table-striped table-hover table-bordered">
 						<tr>
-							<th><p class="text-center">Fecha</p></th>
-							<th><p class="text-center">Nombre </p></th>
-							<th colspan="3" ><p class="text-center">Acciones</p></th>
+							<th rowspan="2"><p class="text-center"><br>Fecha</p></th>
+							<th rowspan="2"><p class="text-center"><br>Nombre </p></th>
+							<th colspan="6" ><p class="text-center">Acciones</p></th>
+						</tr>
+						<tr>
+
+							<th ><p class="text-center">Estado</p></th>
+							<th ><p class="text-center">Resultado</p></th>
+							<th ><p class="text-center">Eliminar</p></th>
 						</tr>
 						
 						#{list items:evaluaciones, as:'evaluacion'}
@@ -99,19 +105,30 @@
 						 	
 						 	<td>
 							 	<center>
+							 		#{if evaluacion.estado=="espera"}
 								 	<a href="/datos?id=${evaluacion.id}" class="btn btn-success">
 									 	<img src="@{'/public/images/iniciar.png'}">	&nbsp;	 	
 									 	Iniciar Test
-								 	</a>
+									 </a>
+									 #{/if}
+									 #{else}
+									 	<h5>Evaluada</h5>
+									 #{/else}
+								 	
 								 </center>
 						 	</td>
 						 	
 						 	<td>
 							 	<center>
+							 		#{if evaluacion.resultado.resultado=="listo"}
 							 		<a href="/resultados?id=${evaluacion.id}" class="btn btn-primary" >
 							 		<img src="@{'/public/images/resultado.png'}">&nbsp; &nbsp;
 							 		 Ver Resultados
 							 		 </a>
+							 		 #{/if}
+							 		 #{else}
+							 		  <h5 >Sin Evaluar</h5>
+							 		 #{/else}
 							 	</center>
 						 	</td>
 						 	

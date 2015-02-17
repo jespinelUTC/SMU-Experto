@@ -9,6 +9,7 @@ import java.util.*;
 @Entity
 public class Evaluacion extends Model {
 	public String fecha;
+	public String estado;
 	@ManyToOne
 	public Dato dato;
 	@ManyToOne

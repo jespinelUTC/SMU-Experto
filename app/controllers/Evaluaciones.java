@@ -67,6 +67,7 @@ public class Evaluaciones extends Controller{
 		String cadenaFecha = new SimpleDateFormat("yyyy-MM-dd").format(fecha);
 	
 		Evaluacion evaluacion=new Evaluacion(cadenaFecha, datos, contexto,u,resultado);
+		evaluacion.estado="espera";
 		evaluacion.save();
 		flash("creada","Registro creado exitosamente, ya puede iniciar el Test para "+nombreSitio);
 		redirect("/evaluaciones");
@@ -149,7 +150,10 @@ public static void calificar(String res, Long id){
 		//Resultado r, Item i, int c
 		Resultado_Item res_item=new Resultado_Item(resultado,item1,calificacion);
 		res_item.save();
-		
+		resultado.resultado="listo";
+		resultado.save();
+		evaluacion.estado="lista";
+		evaluacion.save();
 
 	}
 	}catch(Exception ex){

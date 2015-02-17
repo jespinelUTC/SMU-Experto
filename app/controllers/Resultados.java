@@ -23,11 +23,6 @@ public class Resultados extends Controller {
     	
     	List<Resultado_Item> resumen=Resultado_Item.find("byResultado", res).fetch();
     	List<Parametro> parametros=Parametro.findAll();
-    	
-    	
-    	
-    	
-    	
         render(evaluacion,resumen,parametros);
     }
 
