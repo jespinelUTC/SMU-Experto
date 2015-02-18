@@ -5,7 +5,7 @@
 <html lang="en">
 
 	<head>
-	
+
 	<script type="text/javascript">
 		
 		$(document).ready(function(){
@@ -25,6 +25,41 @@
 				
 			});
 			
+			$('#signupfor').validate(
+					{
+						
+						rules: {
+							email:{required: true},
+							nombre:{required: true, lettersonly:true},
+							apellido:{required: true,lettersonly:true},
+							password:{required: true, minlength:6}
+						},	
+					
+						messages: {
+							
+							email: {
+								required: "Ingrese una dirección valida"
+						
+							},
+							
+							nombre:{
+								required: "Ingrese su nombre",
+								lettersonly: "Ingrese solamente letras"
+								
+							},
+							
+							apellido: {
+								required: "Ingrese su apellido",
+								lettersonly: "Ingrese solamente letras"
+							},
+							password:{
+								required: "Ingrese el su contraseña",
+								minlength: "La contraseña debe tener al menos 6 caracteres"
+							}
+						}
+							
+					});
+			$('#loginSMU').validate();
 			
 			$('#email').blur(function(){
 				var e=$('#email').val();
@@ -66,7 +101,7 @@
 		                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 		                            
 		                            
-		                      #{form @Securing.authenticate(username,password)}
+		                      #{form @Securing.authenticate(username,password),id:'loginSMU'}
 		                      	#{if flash.error}
 										<p class="error" style="color: red; font-weight: bold;">
 											Email o Contraseña Incorrectos
@@ -86,7 +121,7 @@
 		                                    
 		                            <div style="margin-bottom: 25px" class="input-group">
 		                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-		                                        <input id="login-username" type="text" class="form-control" name="username" value="${flash.username}" placeholder="ingrese su e-mail" required>                                        
+		                                        <input id="login-username" type="email" class="form-control" name="username" value="${flash.username}" placeholder="ingrese su e-mail" required>                                        
 		                                    </div>
 		                                
 		                            <div style="margin-bottom: 25px" class="input-group">
@@ -163,19 +198,19 @@
 		                                <div class="form-group">
 		                                    <label for="firstname" class="col-md-3 control-label">Nombre:</label>
 		                                    <div class="col-md-9">
-		                                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required>
+		                                        <input type="text" class="form-control mayuscula" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">
 		                                    <label for="lastname" class="col-md-3 control-label">Apellido:</label>
 		                                    <div class="col-md-9">
-		                                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" required>
+		                                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">
 		                                    <label for="password" class="col-md-3 control-label">Contraseña:</label>
 		                                    <div class="col-md-9">
-		                                        <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+		                                        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required>
 		                                    </div>
 		                                </div>
 		
