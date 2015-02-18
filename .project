@@ -15,5 +15,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	
+	<linkedResources><link><name>pdf-0.2</name><type>2</type><location>/home/rene/workspace/SMU-Experto/modules/pdf-0.2/app</location></link>
+<link><name>public/pdf-0.2</name><type>2</type><location>/home/rene/workspace/SMU-Experto/modules/pdf-0.2/public</location></link>
+</linkedResources>
 </projectDescription>

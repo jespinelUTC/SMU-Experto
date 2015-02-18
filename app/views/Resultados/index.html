@@ -197,7 +197,9 @@ padding-top: 8px;
 	</div>
 
 </div>
+%{String recomendaciones="->"; int ii=0;}%
 #{list items:parametros, as:'parametro'}
+%{ii++;}%
 	<div class="row">
 		<div class="box">
 			
@@ -221,6 +223,7 @@ padding-top: 8px;
 									%{int cal=0,num=1; }%
 									
 									#{list items:resumen, as: 'r'}	
+									
 									#{if parametro == r.item.parametro}
 									<tr>
 										<td class="text-center">
@@ -246,6 +249,25 @@ padding-top: 8px;
 											<td class="text-center malo" >
 												<b>${cal}/50</b>
 											</td>
+											
+											%{
+											
+											if(ii==1)
+											recomendaciones+=" El aspecto general de la página o aplicación debe ser mejorada de manera sustancia, considere que hay que mejorar el diseño, las ideas que transmite el sitio y debe haber un calro enfoque en el mensaje central que desea dar a los usuario .";
+											
+											if(ii==2)
+											recomendaciones+=" Existen problemas para poder navegar en el sitio, es necesario disponer de un menú de opciones preciso que le permita a los usuario seleccionar de manera rápida y sencilla la opción que requiera.";
+											
+											if(ii==3)
+											recomendaciones+=" El sitio deberia resaltar la imagen de la institución a la que representa, para ello se puede considerar mostrar el logo, slogan o utilizar los colores institucionales.";
+											
+											if(ii==4)
+											recomendaciones+=" Es necesario disponer de un medio de búsqueda de información al interior de la página, el cual debe ser visible, además los recursos multimedia deben servir para mejorar el aspecto visual de la página web antes de distraer al usuario.";
+											
+											
+											if(ii==5)
+											recomendaciones+=" Es conveniente que el sitio presente contenidos de ayuda precisos de tal modo que los nuevos usuarios aclaren sus dudas y aprovechen al máximo la aplicación. ";
+											}%
 										#{/if}
 										
 										<!-- Naranjas -->
@@ -254,6 +276,23 @@ padding-top: 8px;
 											<td class="text-center bueno">
 												<b>${cal}/50</b>
 											</td>
+											
+											%{
+											if(ii==1)
+											recomendaciones+=" El aspecto general de la página es aceptable sin embargo podria considerarse mejorar el diseño y la información que se presenta debe ser más directa.";
+											
+											if(ii==2)
+											recomendaciones+=" La navegación dentro del sitio no es óptima, presenta algunas opciones que no tienen un mensaje que permita reconocer cual es la acción que van a realizar.";
+											
+											if(ii==3)
+											recomendaciones+=" El sitio le permite al usuario realizar las actividades esperadas, sin embargo debería tener una identidad institucional dependiendo de la organización a la cual representa.";
+											
+											if(ii==4)
+											recomendaciones+=" Los elementos multimedia deben transmitir metaforas evidentes de tal modo que sean un aporte a la página, también, El búscador debe proporcionar resultados mucho más confiables o a su vez brindar búsquedas avanzadas.";
+											
+											if(ii==5)
+											recomendaciones+=" La ayuda que brinda el sistema debe ser mejorada con el fin de conseguir que las personas puedan acceder a todas las funcionalidades del sitio.";
+											}%
 										#{/if}
 										
 										<!-- Verdes -->
@@ -262,8 +301,26 @@ padding-top: 8px;
 											<td class="text-center muybueno">
 												<b>${cal}/50</b>
 											</td>
+											
+											%{
+											if(ii==1)
+											recomendaciones+=" El aspecto general de la página es el adecuado.";
+											
+											if(ii==2)
+											recomendaciones+=" El menú de navegacion permite alcanzar rapidamente los objetivos que el usuario se plantea.";
+											
+											if(ii==3)
+											recomendaciones+=" El sitio tiene una imagen que resalta a la organización a la cual representa esto ayuda a generar en el usuario una buena opinión de la misma.";
+											
+											if(ii==4)
+											recomendaciones+=" Los elementos multimedia hacen que el usuario entienda los mensajes de manera más rápida y junto al buscador hacen una combinacióm que le facilitan las cosas a los usuarios.";
+											
+											if(ii==5)
+											recomendaciones+=" La ayuda y accesibilidad del sitio son de mucha importancia ya que aclaran las dudas de las personas que ingresan al mismo. ";
+											}%
 										#{/if}
 										
+
 										
 									</tr>
 									
@@ -358,7 +415,14 @@ window.myPie = new Chart(ctx4).Line(linealChartData, {responsive:true});
 
 </script>
 <br><br>
+<div class="box">
+	<h3 class="text-center">OBSERVACIONES DE LA EVALUACIÓN</h3>
+	<p class="text-justify">
+	
+	 ${recomendaciones}
+	</p>
 
+</div>
 <div class="box text-center impresion">
 <input type="button" class="btn btn-primary imprimir text-center" value="IMPRIMIR">
 </div>

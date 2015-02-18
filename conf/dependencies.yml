@@ -2,6 +2,5 @@
 
 require:
     - play 1.2.5
-    - play -> pdf 2.0
     - play -> secure
 	

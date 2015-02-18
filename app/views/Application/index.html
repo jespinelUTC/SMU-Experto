@@ -88,20 +88,20 @@
     <!-- 
     <div class="address-bar" ><b style="text-shadow: 5px 5px 5px #aaa;">Sistema de evaluación de usabilidad mediante la aplicación del análisis Heurístico</b></div>
     -->
-    
-  
+
      
     <div class="container">
     	     <div class="row">
-                   <div id="carrusel" class="carousel slide">
-                        <!-- Indicators -->
+    	     <!-- 
+    	         <div id="carrusel" class="carousel slide">
+                        Indicators 
                         <ol class="carousel-indicators pull-left">
                             <li data-target="#carrusel" data-slide-to="0" class="active"></li>
                             <li data-target="#carrusel" data-slide-to="1"></li>
                             <li data-target="#carrusel" data-slide-to="2"></li>
                         </ol>
 
-                        <!-- Wrapper for slides -->
+                         Wrapper for slides
                         <div class="carousel-inner">
                             <div class="item active">
                                 <img class="img-responsive img-full"  src="@{'/public/images/b3.png'}" alt="">
@@ -114,10 +114,25 @@
                             </div>
                         </div>
 
-                        <!-- Controls -->
+                         Controls 
                         <a class="carousel-control left" href="#carrusel" data-slide="prev">&lsaquo;</a>
                         <a class="carousel-control right" href="#carrusel" data-slide="next">&rsaquo;</a>
                     </div>
+              -->
+                  
+  	<link href="@{'/public/themes/1/js-image-slider.css'}" rel="stylesheet" type="text/css" />
+    <script src="@{'/public/themes/1/js-image-slider.js'}" type="text/javascript"></script>
+
+		  <div id="sliderFrame" class="box container img-responsive" style="height: 300px; width: auto;">
+		        <div id="slider" class="img-responsive" >
+		            
+		            <img class="img-responsive img-full"  src="@{'/public/images/b3.png'}" alt="" />
+		            <img class="img-responsive img-full"  src="@{'/public/images/b2.png'}"  alt="" />
+		            <img class="img-responsive img-full"  src="@{'/public/images/b1.png'}" alt="" title="" />
+		 
+		        </div>
+		    </div>
+               
        </div>
                 
 
