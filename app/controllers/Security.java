@@ -17,8 +17,10 @@ public class Security extends Securing.Security {
 		if(usuario==null){
 			Usuario u = new Usuario(email, nombre, apellido, password);
 			u.save();
+			flash("confirmacion", "Bienvenid@ "+nombre+" ya puede evaluar aplicaciones.");
 			Securing.authenticate(email, password, true);
-			redirect("/evaluaciones");
+			
+			
 		}else{
 			flash("repetido", "No se pudo crear la cuenta, intente con otra dirección de Email");
 			redirect("/login");

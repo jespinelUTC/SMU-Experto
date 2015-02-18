@@ -122,8 +122,14 @@
                   
   	<link href="@{'/public/themes/1/js-image-slider.css'}" rel="stylesheet" type="text/css" />
     <script src="@{'/public/themes/1/js-image-slider.js'}" type="text/javascript"></script>
-
+	
 		  <div id="sliderFrame" class="box container img-responsive" style="height: 300px; width: auto;">
+		  	#{if flash.confirmacion}
+		<div class="box">
+		<h5 class="text-center" style="color: #0088ff">&{flash.confirmacion}</h5>
+		</div>
+		#{/if}
+
 		        <div id="slider" class="img-responsive" >
 		            
 		            <img class="img-responsive img-full"  src="@{'/public/images/b3.png'}" alt="" />

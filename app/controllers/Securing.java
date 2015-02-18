@@ -99,6 +99,7 @@ public class Securing extends Controller {
 
         }
         // Redirect to the original URL (or /)
+        flash("confirmacion", "<b>Bienvenido al sistema, ya puede evaluar aplicaciones.</b>");
         redirectToOriginalURL();
     }
 

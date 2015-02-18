@@ -1,6 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'Evaluación'/}
-
+	
+	
+	#{if flash.confirmacion}
+		<div class="box">
+		<h5 class="text-center" style="color: #0088ff">&{flash.confirmacion}</h5>
+		</div>
+		#{/if}
 	
 	<div class="container">
 
