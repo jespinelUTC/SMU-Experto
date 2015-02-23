@@ -33,20 +33,19 @@
 			 var id=$(this).attr("id");
 			 var val=$(this).val();
 			resultados[id]=val;
-			alert(resultados[id]);
-		 });
-		 
-		 $("#result").click(function(){
+			
 			 var r="";
 			 for(var i=0;i<=resultados.length;i++){
 				 if(resultados[i]>0 && resultados[i]<6){
-				 r+=i+"-"+resultados[i]+"/";
+				 r+=resultados[i]+"-"+i+"/";
 				 }
 			 }
-			 alert(r);
-		 }
-				 
-		 );
+				//alert(r);
+				$("#res").val(r);
+		 });
+		 
+
+		 
 		 
 		 
 		 
@@ -108,8 +107,7 @@
 			<center>
 				<h6>Seleccione el Número del Heurístico a Evaluar</h6>
 				
-				<a class="btn btn-success" id="result">Enviar</a>
-				
+						
 				<ul class="pagination">
 				  	#{if parametros}
 						%{int contador=1;}%
@@ -130,7 +128,7 @@
 				#{if parametros}
 				%{int contador=1;}%
 								
-				#{form @Evaluaciones.calificar(respuestas)}
+				#{form @Evaluaciones.calificar(res)}
 				<input type="hidden" name="res" id="res">
 					#{list items:parametros, as:'parametro'}
 					
