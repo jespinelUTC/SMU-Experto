@@ -1,6 +1,7 @@
 package controllers;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -127,6 +128,17 @@ public class Evaluaciones extends Controller{
 		
 		render(parametros,items,evaluacion);
 	}
+	
+public static void calificar(ArrayList<String> respuestas){
+	
+	
+
+	
+	for(int i=0;i<respuestas.size();i++) {
+		  System.out.println(respuestas.get(i));
+	}
+
+}
 	
 public static void calificar(String res, Long id){
 	

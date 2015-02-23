@@ -1,3 +1,8 @@
+%{
+	
+	ArrayList<String> respuestas=new ArrayList<String>();
+	
+}%
 
 #{extends 'main.html' /}
 #{set title:'Formulario del Análisis'/}
@@ -19,15 +24,27 @@
 		 
 		 
 		 
+	
+		 
 		 $("select").change(function(){
-		
+				
 			 var id=$(this).attr("id");
-			 var cal=$(this).val();
-			 //alert(id+"----"+cal);
-			 var contenido=$("#res").val();
-			 $("#res").val(contenido+cal+"-"+id+"/");
+			 var val=$(this).val();
+			 %{
+				 if(respuestas.contains(0)){
+					respuestas.set(0,"hola cambiado");
+				}else{	
+					respuestas.add(0,"hola nuevo");
+				}
+			  }%
 		 });
+		 
+		 
 	});
+	
+	
+	
+	
 	
 	 function paginacion(id){
 			$(".matriz").hide(); 
@@ -80,6 +97,9 @@
 			
 			<center>
 				<h6>Seleccione el Número del Heurístico a Evaluar</h6>
+				
+				<a class="btn btn-success" href="@{Evaluaciones.calificar(respuestas)}">Enviar</a>
+				
 				<ul class="pagination">
 				  	#{if parametros}
 						%{int contador=1;}%
@@ -100,7 +120,7 @@
 				#{if parametros}
 				%{int contador=1;}%
 								
-				#{form @Evaluaciones.calificar(res,id)}
+				#{form @Evaluaciones.calificar(respuestas)}
 				<input type="hidden" name="res" id="res">
 					#{list items:parametros, as:'parametro'}
 					
