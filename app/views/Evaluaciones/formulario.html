@@ -9,6 +9,8 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
+		
+		var resultados = [];
 
 		$('.otroParametro').click(function(){
 			$('body').animate({
@@ -30,14 +32,22 @@
 				
 			 var id=$(this).attr("id");
 			 var val=$(this).val();
-			 %{
-				 if(respuestas.contains(0)){
-					respuestas.set(0,"hola cambiado");
-				}else{	
-					respuestas.add(0,"hola nuevo");
-				}
-			  }%
+			resultados[id]=val;
+			alert(resultados[id]);
 		 });
+		 
+		 $("#result").click(function(){
+			 var r="";
+			 for(var i=0;i<=resultados.length;i++){
+				 if(resultados[i]>0 && resultados[i]<6){
+				 r+=i+"-"+resultados[i]+"/";
+				 }
+			 }
+			 alert(r);
+		 }
+				 
+		 );
+		 
 		 
 		 
 	});
@@ -98,7 +108,7 @@
 			<center>
 				<h6>Seleccione el Número del Heurístico a Evaluar</h6>
 				
-				<a class="btn btn-success" href="@{Evaluaciones.calificar(respuestas)}">Enviar</a>
+				<a class="btn btn-success" id="result">Enviar</a>
 				
 				<ul class="pagination">
 				  	#{if parametros}
